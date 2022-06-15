@@ -22,6 +22,7 @@ public class PlayerController : MonoBehaviour
     private int moveCounter;
 
 
+
     private bool isMoving = false;
 
     private InterpolatedMovement interpolatedMovement;
@@ -37,6 +38,7 @@ public class PlayerController : MonoBehaviour
         inputActions = new PlayerMovement();
         Counter.text = moveCounter.ToString();
         interpolatedMovement = gameObject.GetComponent<InterpolatedMovement>();
+        
     }
 
     private void OnEnable()
@@ -54,7 +56,7 @@ public class PlayerController : MonoBehaviour
         inputActions.Main.Movement.performed += ctx => Move(ctx.ReadValue<Vector2>());
     }
 
-
+    
 
 
     private void Move(Vector2 direction)

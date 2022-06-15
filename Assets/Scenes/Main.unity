@@ -157,7 +157,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0.21400002, y: 0.2343333}
-  m_AnchoredPosition: {x: -4.19751, y: 0.17004395}
+  m_AnchoredPosition: {x: -4.1973877, y: 0.17004395}
   m_SizeDelta: {x: -8.395142, y: 0.3500061}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &132141416
@@ -207,7 +207,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 225.8
+  m_fontSize: 226.65
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1408,7 +1408,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1470544213}
   m_Father: {fileID: 434812838}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1565,6 +1566,7 @@ GameObject:
   - component: {fileID: 1060546559}
   - component: {fileID: 1060546557}
   - component: {fileID: 1060546560}
+  - component: {fileID: 1060546561}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1590,6 +1592,7 @@ MonoBehaviour:
   birdTilemap: {fileID: 1292516727}
   Counter: {fileID: 132141416}
   moveCounter: 999
+  oneWayDestination: {fileID: 1470544213}
 --- !u!4 &1060546558
 Transform:
   m_ObjectHideFlags: 0
@@ -1598,7 +1601,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1060546556}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1967705996}
@@ -1655,6 +1658,43 @@ MonoBehaviour:
   m_DefaultActionMap: Main
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &1060546561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1060546556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35f0582fe2f0cf14685be1b8e2516e1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  lerpSpeed: 4
 --- !u!1 &1106899763
 GameObject:
   m_ObjectHideFlags: 0
@@ -3176,7 +3216,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c9c95a12a1309545ad26eaf69de4509, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collider2D: {fileID: 1312964459}
   groundTilemap: {fileID: 1777001277}
   birdTilemap: {fileID: 1292516727}
   collisionTilemap: {fileID: 1106899769}
@@ -3549,6 +3588,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPressed: 0
+--- !u!1 &1470544212
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1470544213}
+  m_Layer: 0
+  m_Name: pathDestination
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1470544213
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1470544212}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.5, y: -1.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 982790212}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!850595691 &1529882520
 LightingSettings:
   m_ObjectHideFlags: 0
@@ -5492,7 +5561,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c9c95a12a1309545ad26eaf69de4509, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collider2D: {fileID: 2028251364}
   groundTilemap: {fileID: 1777001277}
   birdTilemap: {fileID: 1292516727}
   collisionTilemap: {fileID: 1106899769}

@@ -5,8 +5,7 @@ using UnityEngine.Tilemaps;
 
 public class TilemapColider : MonoBehaviour
 {
-    [SerializeField]
-    private Collider2D collider2D;
+
     [SerializeField]
     private Tilemap groundTilemap;
     [SerializeField]
