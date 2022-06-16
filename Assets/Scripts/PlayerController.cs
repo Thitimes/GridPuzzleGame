@@ -116,7 +116,7 @@ public class PlayerController : MonoBehaviour
 
     private void OneWayMovement(Vector2 direction)
     {
-      
+
     }
 
 }
