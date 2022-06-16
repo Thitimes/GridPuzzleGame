@@ -207,7 +207,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 226.65
+  m_fontSize: 225.8
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1592,7 +1592,6 @@ MonoBehaviour:
   birdTilemap: {fileID: 1292516727}
   Counter: {fileID: 132141416}
   moveCounter: 999
-  oneWayDestination: {fileID: 1470544213}
 --- !u!4 &1060546558
 Transform:
   m_ObjectHideFlags: 0

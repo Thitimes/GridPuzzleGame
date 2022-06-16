@@ -24,9 +24,10 @@ public class TilemapColider : MonoBehaviour
     }
     public bool Move(Vector2 direction)
     {
-        isMoving = true;
+       
         if (CanMove(direction) && isMoving == false)
         {
+            isMoving = true;
             if (birdTilemap.HasTile(getGridPosition(direction)))
             {
                 birdTilemap.SetTile(getGridPosition(direction), null);

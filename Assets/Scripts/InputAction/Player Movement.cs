@@ -1,4 +1,4 @@
-// GENERATED AUTOMATICALLY FROM 'Assets/Scripts/Player Movement.inputactions'
+// GENERATED AUTOMATICALLY FROM 'Assets/Scripts/InputAction/Player Movement.inputactions'
 
 using System;
 using System.Collections;
@@ -24,6 +24,14 @@ public class @PlayerMovement : IInputActionCollection, IDisposable
                     ""id"": ""f83f1df2-2202-4e58-a0ec-d5d8f775b29f"",
                     ""expectedControlType"": ""Vector2"",
                     ""processors"": ""NormalizeVector2"",
+                    ""interactions"": ""Press""
+                },
+                {
+                    ""name"": ""ReloadScene"",
+                    ""type"": ""Button"",
+                    ""id"": ""db2bb328-90cc-4ed5-9a7d-95f8c71683bc"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
                     ""interactions"": ""Press""
                 }
             ],
@@ -137,6 +145,44 @@ public class @PlayerMovement : IInputActionCollection, IDisposable
                     ""action"": ""Movement"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""4ee630c5-2ad8-427d-a001-6682e1dbb8d0"",
+                    ""path"": ""<Keyboard>/r"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ReloadScene"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
+        },
+        {
+            ""name"": ""UI"",
+            ""id"": ""274a7c5c-3c52-4562-8720-abd727531760"",
+            ""actions"": [
+                {
+                    ""name"": ""Click"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""02cafdc0-7d4a-4638-859f-f07b87893aa9"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""8de2b518-eb80-4c12-8582-f17070813202"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": ""Press"",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Click"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -146,6 +192,10 @@ public class @PlayerMovement : IInputActionCollection, IDisposable
         // Main
         m_Main = asset.FindActionMap("Main", throwIfNotFound: true);
         m_Main_Movement = m_Main.FindAction("Movement", throwIfNotFound: true);
+        m_Main_ReloadScene = m_Main.FindAction("ReloadScene", throwIfNotFound: true);
+        // UI
+        m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
+        m_UI_Click = m_UI.FindAction("Click", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -196,11 +246,13 @@ public class @PlayerMovement : IInputActionCollection, IDisposable
     private readonly InputActionMap m_Main;
     private IMainActions m_MainActionsCallbackInterface;
     private readonly InputAction m_Main_Movement;
+    private readonly InputAction m_Main_ReloadScene;
     public struct MainActions
     {
         private @PlayerMovement m_Wrapper;
         public MainActions(@PlayerMovement wrapper) { m_Wrapper = wrapper; }
         public InputAction @Movement => m_Wrapper.m_Main_Movement;
+        public InputAction @ReloadScene => m_Wrapper.m_Main_ReloadScene;
         public InputActionMap Get() { return m_Wrapper.m_Main; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -213,6 +265,9 @@ public class @PlayerMovement : IInputActionCollection, IDisposable
                 @Movement.started -= m_Wrapper.m_MainActionsCallbackInterface.OnMovement;
                 @Movement.performed -= m_Wrapper.m_MainActionsCallbackInterface.OnMovement;
                 @Movement.canceled -= m_Wrapper.m_MainActionsCallbackInterface.OnMovement;
+                @ReloadScene.started -= m_Wrapper.m_MainActionsCallbackInterface.OnReloadScene;
+                @ReloadScene.performed -= m_Wrapper.m_MainActionsCallbackInterface.OnReloadScene;
+                @ReloadScene.canceled -= m_Wrapper.m_MainActionsCallbackInterface.OnReloadScene;
             }
             m_Wrapper.m_MainActionsCallbackInterface = instance;
             if (instance != null)
@@ -220,12 +275,53 @@ public class @PlayerMovement : IInputActionCollection, IDisposable
                 @Movement.started += instance.OnMovement;
                 @Movement.performed += instance.OnMovement;
                 @Movement.canceled += instance.OnMovement;
+                @ReloadScene.started += instance.OnReloadScene;
+                @ReloadScene.performed += instance.OnReloadScene;
+                @ReloadScene.canceled += instance.OnReloadScene;
             }
         }
     }
     public MainActions @Main => new MainActions(this);
+
+    // UI
+    private readonly InputActionMap m_UI;
+    private IUIActions m_UIActionsCallbackInterface;
+    private readonly InputAction m_UI_Click;
+    public struct UIActions
+    {
+        private @PlayerMovement m_Wrapper;
+        public UIActions(@PlayerMovement wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Click => m_Wrapper.m_UI_Click;
+        public InputActionMap Get() { return m_Wrapper.m_UI; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(UIActions set) { return set.Get(); }
+        public void SetCallbacks(IUIActions instance)
+        {
+            if (m_Wrapper.m_UIActionsCallbackInterface != null)
+            {
+                @Click.started -= m_Wrapper.m_UIActionsCallbackInterface.OnClick;
+                @Click.performed -= m_Wrapper.m_UIActionsCallbackInterface.OnClick;
+                @Click.canceled -= m_Wrapper.m_UIActionsCallbackInterface.OnClick;
+            }
+            m_Wrapper.m_UIActionsCallbackInterface = instance;
+            if (instance != null)
+            {
+                @Click.started += instance.OnClick;
+                @Click.performed += instance.OnClick;
+                @Click.canceled += instance.OnClick;
+            }
+        }
+    }
+    public UIActions @UI => new UIActions(this);
     public interface IMainActions
     {
         void OnMovement(InputAction.CallbackContext context);
+        void OnReloadScene(InputAction.CallbackContext context);
+    }
+    public interface IUIActions
+    {
+        void OnClick(InputAction.CallbackContext context);
     }
 }

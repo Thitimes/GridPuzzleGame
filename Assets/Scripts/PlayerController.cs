@@ -20,6 +20,8 @@ public class PlayerController : MonoBehaviour
     private TextMeshProUGUI Counter;
     [SerializeField]
     private int moveCounter;
+    [SerializeField]
+    private LevelLoader levelLoader;
 
 
 
@@ -38,6 +40,8 @@ public class PlayerController : MonoBehaviour
         inputActions = new PlayerMovement();
         Counter.text = moveCounter.ToString();
         interpolatedMovement = gameObject.GetComponent<InterpolatedMovement>();
+
+        OneWayMovement(new Vector2(-1,0));
         
     }
 
@@ -56,7 +60,10 @@ public class PlayerController : MonoBehaviour
         inputActions.Main.Movement.performed += ctx => Move(ctx.ReadValue<Vector2>());
     }
 
-    
+    public void RestartScene()
+    {
+        levelLoader.LoadScene(0);
+    }
 
 
     private void Move(Vector2 direction)
@@ -72,7 +79,7 @@ public class PlayerController : MonoBehaviour
         }
         if (moveCounter == 0)
         {
-            //endgamehear
+            //endgamehere
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
@@ -80,6 +87,7 @@ public class PlayerController : MonoBehaviour
     private bool CanMove(Vector2 direction)
     {
         Vector3Int gridPosition = groundTilemap.WorldToCell(transform.position + (Vector3)direction);
+        
         if (hit2D = Physics2D.Raycast(transform.position, direction, 1f))
         {
             if (hit2D.collider.tag == "box")
@@ -104,6 +112,11 @@ public class PlayerController : MonoBehaviour
         }
         return true;
     }
- 
+    
+
+    private void OneWayMovement(Vector2 direction)
+    {
+      
+    }
 
 }

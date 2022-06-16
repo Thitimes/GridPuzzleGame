@@ -12,6 +12,14 @@
                     "expectedControlType": "Vector2",
                     "processors": "NormalizeVector2",
                     "interactions": "Press"
+                },
+                {
+                    "name": "ReloadScene",
+                    "type": "Button",
+                    "id": "db2bb328-90cc-4ed5-9a7d-95f8c71683bc",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Press"
                 }
             ],
             "bindings": [
@@ -124,6 +132,44 @@
                     "action": "Movement",
                     "isComposite": false,
                     "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "4ee630c5-2ad8-427d-a001-6682e1dbb8d0",
+                    "path": "<Keyboard>/r",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ReloadScene",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "UI",
+            "id": "274a7c5c-3c52-4562-8720-abd727531760",
+            "actions": [
+                {
+                    "name": "Click",
+                    "type": "PassThrough",
+                    "id": "02cafdc0-7d4a-4638-859f-f07b87893aa9",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "8de2b518-eb80-4c12-8582-f17070813202",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Click",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         }
