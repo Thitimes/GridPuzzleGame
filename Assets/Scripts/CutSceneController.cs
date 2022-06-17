@@ -11,14 +11,13 @@ public class CutSceneController : MonoBehaviour
     [SerializeField]
     private List<Image> imageList = new List<Image>();
     [SerializeField]
-    private TextMeshProUGUI buttonTxt;
+    private GameObject button;
 
     PlayerMovement inputActions;
  
 
     private int clickCount = 0;
 
-    private bool IsStart = false;
 
     private void OnEnable()
     {
@@ -42,15 +41,15 @@ public class CutSceneController : MonoBehaviour
             imageList[clickCount].enabled = true;
             clickCount++;
         }
-        if (IsStart == true)
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        }
         if (clickCount == imageList.Count )
         {
-            IsStart = true;
-            buttonTxt.text = "Start";
+            button.SetActive(true);
         }
       
+    }
+
+    public void LoadNextScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
