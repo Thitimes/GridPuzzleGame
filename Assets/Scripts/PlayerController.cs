@@ -66,15 +66,18 @@ public class PlayerController : MonoBehaviour
     }
 
 
-    public void Move(Vector2 direction)
+    public void Move(Vector2 direction, bool IsOneWay = false)
     {
 
         if (CanMove(direction) && isMoving == false)
         {
             isMoving = true;
             interpolatedMovement.MoveToTarget(transform.position + (Vector3)direction, () => { isMoving = false; });
-            moveCounter--;
-            Counter.text = moveCounter.ToString();
+            if (IsOneWay == false)
+            {
+                moveCounter--;
+                Counter.text = moveCounter.ToString();
+            }
 
         }
         if (moveCounter == 0)
@@ -101,7 +104,7 @@ public class PlayerController : MonoBehaviour
 
 
         }
-        if (birdTilemap.HasTile(gridPosition))
+        if (birdTilemap.HasTile(gridPosition) && isMoving == false)
         {
             birdTilemap.SetTile(gridPosition, null);
             moveCounter -= minusCounter;

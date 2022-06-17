@@ -35,7 +35,7 @@ public class OneWayManager : MonoBehaviour
     {
         
         yield return new WaitUntil(() => playerController.isMoving == false);
-        playerController.Move(GetOneWayDirection(direction));
+        playerController.Move(GetOneWayDirection(direction),true);
 
     }
 }
