@@ -25,7 +25,7 @@ public class PlayerController : MonoBehaviour
 
 
 
-    private bool isMoving = false;
+    public bool isMoving = false;
 
     private InterpolatedMovement interpolatedMovement;
 
@@ -66,7 +66,7 @@ public class PlayerController : MonoBehaviour
     }
 
 
-    private void Move(Vector2 direction)
+    public void Move(Vector2 direction)
     {
 
         if (CanMove(direction) && isMoving == false)

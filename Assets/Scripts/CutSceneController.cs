@@ -13,18 +13,30 @@ public class CutSceneController : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI buttonTxt;
 
+    PlayerMovement inputActions;
  
 
     private int clickCount = 0;
 
     private bool IsStart = false;
 
-    private void Start()
+    private void OnEnable()
     {
-       
+        inputActions.Enable();
+    }
+    private void OnDisable()
+    {
+        inputActions.Disable();
+    }
+
+    private void Awake()
+    {
+        inputActions = new PlayerMovement();
+        inputActions.UI.Click.performed += ctx => OnClick();
     }
     public void OnClick()
     {
+        
         if (clickCount < imageList.Count)
         {
             imageList[clickCount].enabled = true;
