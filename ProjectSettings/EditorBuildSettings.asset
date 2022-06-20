@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/CutScene.unity
     guid: 4ae45afc29fb3034693467cac92f6070
   - enabled: 1
-    path: Assets/Scenes/stage2-1.unity
+    path: Assets/Scenes/realgame/stage2-1.unity
     guid: 96cb0910900c18e4996524fa6c3a9677
   - enabled: 1
     path: Assets/Scenes/VisualNovel.unity
