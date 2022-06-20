@@ -2,14 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class BottomBarController : MonoBehaviour
 {
     public TextMeshProUGUI barText;
     public StoryScene currentScene;
-
+    public GameObject currentImage;
 
     private int sentenceIndex = -1;
+    private int spriteIndex = -1;
     private State state = State.COMPLETED;
 
     private Animator animator;
@@ -50,6 +52,7 @@ public class BottomBarController : MonoBehaviour
     {
         currentScene = scene;
         sentenceIndex = -1;
+        spriteIndex = -1;
     }
 
     public bool IsLastSentence()
@@ -74,7 +77,7 @@ public class BottomBarController : MonoBehaviour
         barText.text = "";
         state = State.PLAYING;
         int wordIndex = 0;
-
+        currentImage.GetComponent<Image>().sprite = currentScene.sentences[++spriteIndex].currentSprite;
         while(state != State.COMPLETED)
         {
             barText.text += text[wordIndex];
