@@ -1,12 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class VNmanager : MonoBehaviour
 {
     public StoryScene currentScene;
     public BottomBarController bottomBar;
+    public GameObject choiceSelection;
     private State state = State.IDLE;
+    private bool changeScene = false;
+    private string NextUnityScene;
+
 
     PlayerMovement inputActions;
 
@@ -36,29 +42,58 @@ public class VNmanager : MonoBehaviour
     {
         if (state == State.IDLE && bottomBar.IsCompleted())
         {
-            if (bottomBar.IsLastSentence())
+            if (changeScene == true && bottomBar.IsLastSentence())
             {
-                PlayScene(currentScene.nextScene);
+                SceneManager.LoadScene(NextUnityScene);
+            }
+            else if(bottomBar.IsLastSentence()&& changeScene == false)
+            {
+                PlaySceneButton();
+                
+            
             }
             bottomBar.PlayNextSentence();
         }
     }
 
-    private void PlayScene(StoryScene scene)
+    private void PlaySceneButton()
     {
-        StartCoroutine(SwitchScene(scene));
+        StartCoroutine(SwitchToButton());
+    }
+    public void PlayAfterButton(StoryScene scene)
+    {
+        changeScene = true;
+        StartCoroutine(ChangeToNextScene(scene));
+        NextUnityScene = currentScene.nextScene;
     }
 
-    private IEnumerator SwitchScene(StoryScene scene)
+    private IEnumerator SwitchToButton()
+    {
+        state = State.ANIMATE;
+ 
+        bottomBar.Hide();
+        bottomBar.currentImage.SetActive(false);
+        yield return new WaitForSeconds(1f);
+        bottomBar.ClearText();
+        if (changeScene == false)
+        {
+            choiceSelection.SetActive(true);
+        }
+        state = State.IDLE;
+    }
+
+    private IEnumerator ChangeToNextScene(StoryScene scene)
     {
         state = State.ANIMATE;
         currentScene = scene;
-        bottomBar.Hide();
-        yield return new WaitForSeconds(1f);
+        choiceSelection.SetActive(false);
         bottomBar.ClearText();
-        //bottomBar.Show();
-        //yield return new WaitForSeconds(1f);
-        //bottomBar.PlayScene(scene);
+        bottomBar.Show();
+        bottomBar.currentImage.SetActive(true);
+        yield return new WaitForSeconds(1f);
+        bottomBar.PlayScene(scene);
         state = State.IDLE;
+        
+        
     }
 }
