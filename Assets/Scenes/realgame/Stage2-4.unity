@@ -197,6 +197,11 @@ PrefabInstance:
       objectReference: {fileID: 211926490}
     - target: {fileID: 288267002785284127, guid: 447926dc4910f9849bd104f30efd82b7,
         type: 3}
+      propertyPath: doorTilemap
+      value: 
+      objectReference: {fileID: 1629137050}
+    - target: {fileID: 288267002785284127, guid: 447926dc4910f9849bd104f30efd82b7,
+        type: 3}
       propertyPath: groundTilemap
       value: 
       objectReference: {fileID: 2107102567}
@@ -358,6 +363,11 @@ PrefabInstance:
       propertyPath: birdTilemap
       value: 
       objectReference: {fileID: 211926490}
+    - target: {fileID: 288267002785284127, guid: 447926dc4910f9849bd104f30efd82b7,
+        type: 3}
+      propertyPath: doorTilemap
+      value: 
+      objectReference: {fileID: 1629137050}
     - target: {fileID: 288267002785284127, guid: 447926dc4910f9849bd104f30efd82b7,
         type: 3}
       propertyPath: groundTilemap
@@ -670,6 +680,11 @@ PrefabInstance:
       propertyPath: birdTilemap
       value: 
       objectReference: {fileID: 211926490}
+    - target: {fileID: 288267002785284127, guid: 447926dc4910f9849bd104f30efd82b7,
+        type: 3}
+      propertyPath: doorTilemap
+      value: 
+      objectReference: {fileID: 1629137050}
     - target: {fileID: 288267002785284127, guid: 447926dc4910f9849bd104f30efd82b7,
         type: 3}
       propertyPath: groundTilemap
@@ -2539,6 +2554,11 @@ PrefabInstance:
       propertyPath: birdTilemap
       value: 
       objectReference: {fileID: 211926490}
+    - target: {fileID: 288267002785284127, guid: 447926dc4910f9849bd104f30efd82b7,
+        type: 3}
+      propertyPath: doorTilemap
+      value: 
+      objectReference: {fileID: 1629137050}
     - target: {fileID: 288267002785284127, guid: 447926dc4910f9849bd104f30efd82b7,
         type: 3}
       propertyPath: groundTilemap

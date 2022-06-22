@@ -1942,6 +1942,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c9c95a12a1309545ad26eaf69de4509, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  doorTilemap: {fileID: 441063601}
   groundTilemap: {fileID: 933063760}
   birdTilemap: {fileID: 1465694070}
   collisionTilemap: {fileID: 882077601}
@@ -2128,6 +2129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c9c95a12a1309545ad26eaf69de4509, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  doorTilemap: {fileID: 441063601}
   groundTilemap: {fileID: 933063760}
   birdTilemap: {fileID: 1465694070}
   collisionTilemap: {fileID: 882077601}

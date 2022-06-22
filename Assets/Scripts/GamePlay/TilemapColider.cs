@@ -5,7 +5,8 @@ using UnityEngine.Tilemaps;
 
 public class TilemapColider : MonoBehaviour
 {
-
+    [SerializeField]
+    private Tilemap doorTilemap;
     [SerializeField]
     private Tilemap groundTilemap;
     [SerializeField]
@@ -48,7 +49,7 @@ public class TilemapColider : MonoBehaviour
             }
         }
 
-            if (!groundTilemap.HasTile(getGridPosition(direction)) || collisionTilemap.HasTile(getGridPosition(direction)))
+            if (!groundTilemap.HasTile(getGridPosition(direction)) || collisionTilemap.HasTile(getGridPosition(direction)) || doorTilemap.HasTile(getGridPosition(direction)))
             {
                 return false;
             }

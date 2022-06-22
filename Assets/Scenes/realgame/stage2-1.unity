@@ -2478,6 +2478,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c9c95a12a1309545ad26eaf69de4509, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  doorTilemap: {fileID: 646098668}
   groundTilemap: {fileID: 1777001277}
   birdTilemap: {fileID: 1292516727}
   collisionTilemap: {fileID: 1106899769}
@@ -2703,6 +2704,11 @@ PrefabInstance:
       propertyPath: birdTilemap
       value: 
       objectReference: {fileID: 1292516727}
+    - target: {fileID: 288267002785284127, guid: 447926dc4910f9849bd104f30efd82b7,
+        type: 3}
+      propertyPath: doorTilemap
+      value: 
+      objectReference: {fileID: 646098668}
     - target: {fileID: 288267002785284127, guid: 447926dc4910f9849bd104f30efd82b7,
         type: 3}
       propertyPath: groundTilemap
