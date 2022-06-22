@@ -26,7 +26,6 @@ public class OneWayManager : MonoBehaviour
         
         if(collision.tag == "Player")
         {
-            Debug.Log("yeah");
            StartCoroutine(PushPlayer());
         }
     }

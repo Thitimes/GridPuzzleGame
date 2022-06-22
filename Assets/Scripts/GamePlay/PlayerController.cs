@@ -93,7 +93,7 @@ public class PlayerController : MonoBehaviour
         
         if (hit2D = Physics2D.Raycast(transform.position, direction, 1f))
         {
-            if (hit2D.collider.tag == "box")
+            if (hit2D.collider.tag == "box" && isMoving == false)
             {
                 TilemapColider Box = hit2D.collider.GetComponent<TilemapColider>();
                 if (!Box.Move(direction))
