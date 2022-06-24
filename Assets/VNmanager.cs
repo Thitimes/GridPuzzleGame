@@ -12,7 +12,7 @@ public class VNmanager : MonoBehaviour
     private State state = State.IDLE;
     private bool changeScene = false;
     private string NextUnityScene;
-
+    private bool alreadyClick;
 
     PlayerMovement inputActions;
 
@@ -31,6 +31,7 @@ public class VNmanager : MonoBehaviour
     }
     private void Awake()
     {
+        alreadyClick = false;
         inputActions = new PlayerMovement();
         inputActions.UI.Click.performed += ctx => NextSentence();
     }
@@ -42,17 +43,23 @@ public class VNmanager : MonoBehaviour
     {
         if (state == State.IDLE && bottomBar.IsCompleted())
         {
+            
+
             if (changeScene == true && bottomBar.IsLastSentence())
             {
                 SceneManager.LoadScene(NextUnityScene);
             }
             else if(bottomBar.IsLastSentence()&& changeScene == false)
             {
-                PlaySceneButton();
-                
+                PlaySceneButton();   
             
             }
+            if (alreadyClick)
+            {
+                bottomBar.skipDialogue();
+            }
             bottomBar.PlayNextSentence();
+
         }
     }
 

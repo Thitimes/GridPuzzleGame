@@ -2317,17 +2317,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3831810361076093487, guid: 7c1884c5ff9d55f469ea38ba7d240baa,
+    - target: {fileID: 4054396348346722289, guid: 7c1884c5ff9d55f469ea38ba7d240baa,
         type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -4.1973877
+      propertyPath: m_Alpha
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3831810361880883872, guid: 7c1884c5ff9d55f469ea38ba7d240baa,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -1.0001221
-      objectReference: {fileID: 0}
-    - target: {fileID: 3831810361880883873, guid: 7c1884c5ff9d55f469ea38ba7d240baa,
+    - target: {fileID: 4280576216550139255, guid: 7c1884c5ff9d55f469ea38ba7d240baa,
         type: 3}
       propertyPath: m_Alpha
       value: 0
@@ -2653,6 +2648,11 @@ PrefabInstance:
       propertyPath: levelLoader
       value: 
       objectReference: {fileID: 1955886276}
+    - target: {fileID: 4080499779369728718, guid: 37db2852949b983408cc58ae81e101d9,
+        type: 3}
+      propertyPath: moveCounter
+      value: 99
+      objectReference: {fileID: 0}
     - target: {fileID: 4080499779369728718, guid: 37db2852949b983408cc58ae81e101d9,
         type: 3}
       propertyPath: groundTilemap

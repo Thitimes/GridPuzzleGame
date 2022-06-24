@@ -73,8 +73,12 @@ MonoBehaviour:
   collisionTilemap: {fileID: 0}
   birdTilemap: {fileID: 0}
   Counter: {fileID: 0}
-  moveCounter: 999
+  moveCounter: 30
   levelLoader: {fileID: 0}
+  counterColor:
+  - {r: 0.5131403, g: 1, b: 0, a: 1}
+  - {r: 0.9743725, g: 1, b: 0, a: 1}
+  - {r: 1, g: 0.120469436, b: 0, a: 1}
   isMoving: 0
 --- !u!114 &4080499779369727283
 MonoBehaviour:
