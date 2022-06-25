@@ -22,6 +22,8 @@ public class PlayerController : MonoBehaviour
     private int moveCounter;
     [SerializeField]
     private LevelLoader levelLoader;
+    [SerializeField]
+    private Color[] counterColor;
 
 
 
@@ -40,8 +42,6 @@ public class PlayerController : MonoBehaviour
         inputActions = new PlayerMovement();
         Counter.text = moveCounter.ToString();
         interpolatedMovement = gameObject.GetComponent<InterpolatedMovement>();
-
-        OneWayMovement(new Vector2(-1,0));
         
     }
 
@@ -58,6 +58,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         inputActions.Main.Movement.performed += ctx => Move(ctx.ReadValue<Vector2>());
+        Counter.color = counterColor[0];
     }
 
     public void RestartScene()
@@ -69,6 +70,7 @@ public class PlayerController : MonoBehaviour
     public void Move(Vector2 direction, bool IsOneWay = false)
     {
 
+        changeCounterColor();
         if (CanMove(direction) && isMoving == false)
         {
             isMoving = true;
@@ -80,7 +82,7 @@ public class PlayerController : MonoBehaviour
             }
 
         }
-        if (moveCounter == 0)
+        if (moveCounter < 0)
         {
             //endgamehere
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
@@ -117,9 +119,15 @@ public class PlayerController : MonoBehaviour
     }
     
 
-    private void OneWayMovement(Vector2 direction)
+  private void changeCounterColor()
     {
-
+        if(moveCounter == 20)
+        {
+            Counter.color = counterColor[1];
+        }
+        else if(moveCounter == 10)
+        {
+            Counter.color = counterColor[2];
+        }
     }
-
 }

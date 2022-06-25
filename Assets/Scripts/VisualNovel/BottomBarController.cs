@@ -12,7 +12,7 @@ public class BottomBarController : MonoBehaviour
 
     private int sentenceIndex = -1;
     private int spriteIndex = -1;
-    private State state = State.COMPLETED;
+    public State state = State.COMPLETED;
 
     private Animator animator;
     private bool isHidden = false;
@@ -44,7 +44,7 @@ public class BottomBarController : MonoBehaviour
     }
 
 
-    private enum State
+    public enum State
     {
             PLAYING,COMPLETED
     }
@@ -80,6 +80,7 @@ public class BottomBarController : MonoBehaviour
         currentImage.GetComponent<Image>().sprite = currentScene.sentences[++spriteIndex].currentSprite;
         while(state != State.COMPLETED)
         {
+            
             barText.text += text[wordIndex];
             yield return new WaitForSeconds(0.005f);
             if(++wordIndex == text.Length)
@@ -87,8 +88,14 @@ public class BottomBarController : MonoBehaviour
                 state = State.COMPLETED;
                 break;
             }
+            
         }
 
 
+    }
+    public void skipDialogue()
+    {
+        barText.text = currentScene.sentences[sentenceIndex].text;
+        state = State.COMPLETED;
     }
 }
