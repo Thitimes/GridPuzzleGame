@@ -82,7 +82,7 @@ public class PlayerController : MonoBehaviour
             }
 
         }
-        if (moveCounter == 0)
+        if (moveCounter < 0)
         {
             //endgamehere
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
