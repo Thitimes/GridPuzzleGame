@@ -952,6 +952,11 @@ PrefabInstance:
       objectReference: {fileID: 1901069981}
     - target: {fileID: 4080499779369728718, guid: 37db2852949b983408cc58ae81e101d9,
         type: 3}
+      propertyPath: moveCounter
+      value: 86
+      objectReference: {fileID: 0}
+    - target: {fileID: 4080499779369728718, guid: 37db2852949b983408cc58ae81e101d9,
+        type: 3}
       propertyPath: groundTilemap
       value: 
       objectReference: {fileID: 812967793}
