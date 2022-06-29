@@ -7,12 +7,14 @@ using UnityEngine.UI;
 public class VNmanager : MonoBehaviour
 {
     public StoryScene currentScene;
+    public LevelLoader levelLoader;
     public BottomBarController bottomBar;
     public GameObject choiceSelection;
     private State state = State.IDLE;
+    [SerializeField]
     private bool changeScene = false;
     private string NextUnityScene;
-    private bool alreadyClick;
+    public string[] nextSceneToLoad;
 
     PlayerMovement inputActions;
 
@@ -31,13 +33,13 @@ public class VNmanager : MonoBehaviour
     }
     private void Awake()
     {
-        alreadyClick = false;
         inputActions = new PlayerMovement();
         inputActions.UI.Click.performed += ctx => NextSentence();
     }
     void Start()
     {
         bottomBar.PlayScene(currentScene);
+        NextUnityScene = nextSceneToLoad[Random.Range(0,nextSceneToLoad.Length)];
     }
     private void NextSentence()
     {
@@ -47,19 +49,15 @@ public class VNmanager : MonoBehaviour
 
             if (changeScene == true && bottomBar.IsLastSentence())
             {
-                SceneManager.LoadScene(NextUnityScene);
+                levelLoader.LoadScene(NextUnityScene);
             }
             else if(bottomBar.IsLastSentence()&& changeScene == false)
             {
                 PlaySceneButton();   
             
             }
-            if (alreadyClick)
-            {
-                bottomBar.skipDialogue();
-            }
             bottomBar.PlayNextSentence();
-
+            //inputActions.UI.Click.performed += ctx => bottomBar.skipDialogue();
         }
     }
 
@@ -71,7 +69,7 @@ public class VNmanager : MonoBehaviour
     {
         changeScene = true;
         StartCoroutine(ChangeToNextScene(scene));
-        NextUnityScene = currentScene.nextScene;
+        NextUnityScene = currentScene.nextScene[Random.Range(0,currentScene.nextScene.Length)];
     }
 
     private IEnumerator SwitchToButton()
@@ -102,5 +100,9 @@ public class VNmanager : MonoBehaviour
         state = State.IDLE;
         
         
+    }
+    public void changeBackInput()
+    {
+        inputActions.UI.Click.performed += ctx => NextSentence();
     }
 }

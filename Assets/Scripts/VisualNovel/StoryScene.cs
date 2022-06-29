@@ -10,7 +10,7 @@ public class StoryScene : GameScene
 {
     public List<Sentence> sentences;
     public Sprite background;
-    public string nextScene;
+    public string[] nextScene;
 
     [System.Serializable]
     public struct Sentence

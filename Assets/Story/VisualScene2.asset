@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fb8c0a416e947f42be65858844e3a19, type: 3}
+  m_Name: VisualScene2
+  m_EditorClassIdentifier: 
+  sentences:
+  - text: '"Oh Crap! That box it moves? What was that inside?"'
+    currentSprite: {fileID: 21300000, guid: e68fa483cc263214d9b79dd5bca76b5f, type: 3}
+  - text: During your wonder the mystery box is missing in a narrow alley.
+    currentSprite: {fileID: 21300000, guid: 574df51d66ea71f45925d9a5f4c87c1d, type: 3}
+  - text: You try to follow the box. However, it was a crossroads on the other side.
+    currentSprite: {fileID: 21300000, guid: 574df51d66ea71f45925d9a5f4c87c1d, type: 3}
+  - text: '"Where did it go?" '
+    currentSprite: {fileID: 21300000, guid: 574df51d66ea71f45925d9a5f4c87c1d, type: 3}
+  background: {fileID: 21300000, guid: 02c612b66d8b00540810ef9ab39e80e8, type: 3}
+  nextScene: []

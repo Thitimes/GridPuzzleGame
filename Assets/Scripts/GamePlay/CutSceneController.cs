@@ -39,13 +39,15 @@ public class CutSceneController : MonoBehaviour
         if (clickCount < imageList.Count)
         {
             imageList[clickCount].enabled = true;
-            clickCount++;
+           
         }
-        if (clickCount == imageList.Count )
+        clickCount++;
+        if (clickCount == imageList.Count + 1 )
         {
             button.SetActive(true);
         }
-      
+         
+
     }
 
     public void LoadNextScene()

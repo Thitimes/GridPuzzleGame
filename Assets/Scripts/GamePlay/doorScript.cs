@@ -7,6 +7,7 @@ public class doorScript : MonoBehaviour
 {
     [SerializeField] private Swtich[] swtiches;
    [SerializeField] private Tilemap doorTile;
+   [SerializeField] private GameObject doorAnim;
     private bool Alltrue = false;
 
     // Update is called once per frame
@@ -15,6 +16,7 @@ public class doorScript : MonoBehaviour
         if (allButtonPressed())
         {
             doorTile.ClearAllTiles();
+            Destroy(doorAnim);
         }
     }
 
