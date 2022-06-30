@@ -225,6 +225,7 @@ MonoBehaviour:
   _runOnlyOnce: 1
   _sortingSelector: 0
   _sortingAxis: 1
+  _meshRenderer: {fileID: 0}
 --- !u!1 &103248449
 GameObject:
   m_ObjectHideFlags: 0
@@ -1002,6 +1003,7 @@ MonoBehaviour:
   _runOnlyOnce: 1
   _sortingSelector: 0
   _sortingAxis: 1
+  _meshRenderer: {fileID: 0}
 --- !u!1 &148745237
 GameObject:
   m_ObjectHideFlags: 0
@@ -1104,6 +1106,7 @@ MonoBehaviour:
   _runOnlyOnce: 1
   _sortingSelector: 0
   _sortingAxis: 1
+  _meshRenderer: {fileID: 0}
 --- !u!1001 &150807331
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1391,6 +1394,7 @@ MonoBehaviour:
   _runOnlyOnce: 1
   _sortingSelector: 0
   _sortingAxis: 1
+  _meshRenderer: {fileID: 0}
 --- !u!1 &208530374
 GameObject:
   m_ObjectHideFlags: 0
@@ -2594,6 +2598,7 @@ MonoBehaviour:
   _runOnlyOnce: 1
   _sortingSelector: 0
   _sortingAxis: 1
+  _meshRenderer: {fileID: 0}
 --- !u!1 &431348239
 GameObject:
   m_ObjectHideFlags: 0
@@ -2696,6 +2701,7 @@ MonoBehaviour:
   _runOnlyOnce: 1
   _sortingSelector: 1
   _sortingAxis: 1
+  _meshRenderer: {fileID: 0}
 --- !u!1 &521909277
 GameObject:
   m_ObjectHideFlags: 0
@@ -2798,6 +2804,7 @@ MonoBehaviour:
   _runOnlyOnce: 1
   _sortingSelector: 0
   _sortingAxis: 1
+  _meshRenderer: {fileID: 0}
 --- !u!1001 &532335131
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3282,6 +3289,7 @@ MonoBehaviour:
   _runOnlyOnce: 1
   _sortingSelector: 0
   _sortingAxis: 1
+  _meshRenderer: {fileID: 0}
 --- !u!1 &591427976
 GameObject:
   m_ObjectHideFlags: 0
@@ -3333,6 +3341,7 @@ MonoBehaviour:
   _runOnlyOnce: 1
   _sortingSelector: 0
   _sortingAxis: 1
+  _meshRenderer: {fileID: 0}
 --- !u!95 &591427979
 Animator:
   serializedVersion: 3
@@ -3505,6 +3514,7 @@ MonoBehaviour:
   _runOnlyOnce: 1
   _sortingSelector: 0
   _sortingAxis: 1
+  _meshRenderer: {fileID: 0}
 --- !u!1001 &765945992
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4059,6 +4069,7 @@ MonoBehaviour:
   _runOnlyOnce: 1
   _sortingSelector: 0
   _sortingAxis: 1
+  _meshRenderer: {fileID: 0}
 --- !u!1 &1103047121
 GameObject:
   m_ObjectHideFlags: 0
@@ -4244,6 +4255,7 @@ MonoBehaviour:
   _runOnlyOnce: 1
   _sortingSelector: 0
   _sortingAxis: 1
+  _meshRenderer: {fileID: 0}
 --- !u!1 &1116671853
 GameObject:
   m_ObjectHideFlags: 0
@@ -4346,6 +4358,7 @@ MonoBehaviour:
   _runOnlyOnce: 1
   _sortingSelector: 0
   _sortingAxis: 1
+  _meshRenderer: {fileID: 0}
 --- !u!1 &1192743856
 GameObject:
   m_ObjectHideFlags: 0
@@ -4448,6 +4461,7 @@ MonoBehaviour:
   _runOnlyOnce: 1
   _sortingSelector: 0
   _sortingAxis: 1
+  _meshRenderer: {fileID: 0}
 --- !u!1 &1196418080
 GameObject:
   m_ObjectHideFlags: 0
@@ -4610,6 +4624,7 @@ MonoBehaviour:
   _runOnlyOnce: 1
   _sortingSelector: 0
   _sortingAxis: 1
+  _meshRenderer: {fileID: 0}
 --- !u!1 &1214814149
 GameObject:
   m_ObjectHideFlags: 0
@@ -4712,6 +4727,7 @@ MonoBehaviour:
   _runOnlyOnce: 1
   _sortingSelector: 0
   _sortingAxis: 1
+  _meshRenderer: {fileID: 0}
 --- !u!1 &1238024254
 GameObject:
   m_ObjectHideFlags: 0
@@ -4814,6 +4830,7 @@ MonoBehaviour:
   _runOnlyOnce: 1
   _sortingSelector: 0
   _sortingAxis: 1
+  _meshRenderer: {fileID: 0}
 --- !u!1 &1256557605
 GameObject:
   m_ObjectHideFlags: 0
@@ -4916,6 +4933,7 @@ MonoBehaviour:
   _runOnlyOnce: 1
   _sortingSelector: 1
   _sortingAxis: 1
+  _meshRenderer: {fileID: 0}
 --- !u!1 &1325275472
 GameObject:
   m_ObjectHideFlags: 0
@@ -5018,6 +5036,7 @@ MonoBehaviour:
   _runOnlyOnce: 1
   _sortingSelector: 0
   _sortingAxis: 1
+  _meshRenderer: {fileID: 0}
 --- !u!1001 &1381582464
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5210,6 +5229,7 @@ MonoBehaviour:
   _runOnlyOnce: 1
   _sortingSelector: 0
   _sortingAxis: 1
+  _meshRenderer: {fileID: 0}
 --- !u!1 &1452399401
 GameObject:
   m_ObjectHideFlags: 0
@@ -5719,6 +5739,7 @@ MonoBehaviour:
   _runOnlyOnce: 1
   _sortingSelector: 0
   _sortingAxis: 1
+  _meshRenderer: {fileID: 0}
 --- !u!1 &1517930506
 GameObject:
   m_ObjectHideFlags: 0
@@ -5821,6 +5842,7 @@ MonoBehaviour:
   _runOnlyOnce: 1
   _sortingSelector: 0
   _sortingAxis: 1
+  _meshRenderer: {fileID: 0}
 --- !u!1 &1544394921
 GameObject:
   m_ObjectHideFlags: 0
@@ -5923,6 +5945,7 @@ MonoBehaviour:
   _runOnlyOnce: 1
   _sortingSelector: 0
   _sortingAxis: 1
+  _meshRenderer: {fileID: 0}
 --- !u!1 &1567518999
 GameObject:
   m_ObjectHideFlags: 0
@@ -6025,6 +6048,7 @@ MonoBehaviour:
   _runOnlyOnce: 1
   _sortingSelector: 0
   _sortingAxis: 1
+  _meshRenderer: {fileID: 0}
 --- !u!1001 &1575599572
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6112,6 +6136,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: box 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8330023144051735754, guid: 7cd1d24056c0c26478157b32ccf2c536,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7cd1d24056c0c26478157b32ccf2c536, type: 3}
 --- !u!1001 &1610649351
@@ -6121,6 +6150,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1875932171, guid: 37db2852949b983408cc58ae81e101d9, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4080499779369728717, guid: 37db2852949b983408cc58ae81e101d9,
         type: 3}
       propertyPath: m_RootOrder
@@ -6199,7 +6232,7 @@ PrefabInstance:
     - target: {fileID: 4080499779369728718, guid: 37db2852949b983408cc58ae81e101d9,
         type: 3}
       propertyPath: moveCounter
-      value: 73
+      value: 999
       objectReference: {fileID: 0}
     - target: {fileID: 4080499779369728718, guid: 37db2852949b983408cc58ae81e101d9,
         type: 3}
@@ -6342,6 +6375,7 @@ MonoBehaviour:
   _runOnlyOnce: 1
   _sortingSelector: 0
   _sortingAxis: 1
+  _meshRenderer: {fileID: 0}
 --- !u!1001 &1707499596
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6712,6 +6746,7 @@ MonoBehaviour:
   _runOnlyOnce: 1
   _sortingSelector: 0
   _sortingAxis: 1
+  _meshRenderer: {fileID: 0}
 --- !u!1 &1733520321
 GameObject:
   m_ObjectHideFlags: 0
@@ -6814,6 +6849,7 @@ MonoBehaviour:
   _runOnlyOnce: 1
   _sortingSelector: 0
   _sortingAxis: 1
+  _meshRenderer: {fileID: 0}
 --- !u!1 &1915703955
 GameObject:
   m_ObjectHideFlags: 0
@@ -6916,6 +6952,7 @@ MonoBehaviour:
   _runOnlyOnce: 1
   _sortingSelector: 0
   _sortingAxis: 1
+  _meshRenderer: {fileID: 0}
 --- !u!1001 &1964113846
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7002,6 +7039,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: box 1 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8330023144051735754, guid: 7cd1d24056c0c26478157b32ccf2c536,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7cd1d24056c0c26478157b32ccf2c536, type: 3}
@@ -7107,6 +7149,7 @@ MonoBehaviour:
   _runOnlyOnce: 1
   _sortingSelector: 0
   _sortingAxis: 1
+  _meshRenderer: {fileID: 0}
 --- !u!1001 &2027312257
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7203,6 +7246,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: box 1 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8330023144051735754, guid: 7cd1d24056c0c26478157b32ccf2c536,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7cd1d24056c0c26478157b32ccf2c536, type: 3}
@@ -7308,6 +7356,7 @@ MonoBehaviour:
   _runOnlyOnce: 1
   _sortingSelector: 0
   _sortingAxis: 1
+  _meshRenderer: {fileID: 0}
 --- !u!1 &2037972653
 GameObject:
   m_ObjectHideFlags: 0
@@ -7410,6 +7459,7 @@ MonoBehaviour:
   _runOnlyOnce: 1
   _sortingSelector: 0
   _sortingAxis: 1
+  _meshRenderer: {fileID: 0}
 --- !u!1 &2115963302
 GameObject:
   m_ObjectHideFlags: 0

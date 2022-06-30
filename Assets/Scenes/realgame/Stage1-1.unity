@@ -233,6 +233,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1875932171, guid: 37db2852949b983408cc58ae81e101d9, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4080499779369728717, guid: 37db2852949b983408cc58ae81e101d9,
         type: 3}
       propertyPath: m_RootOrder
@@ -308,11 +312,6 @@ PrefabInstance:
       propertyPath: levelLoader
       value: 
       objectReference: {fileID: 1355205756}
-    - target: {fileID: 4080499779369728718, guid: 37db2852949b983408cc58ae81e101d9,
-        type: 3}
-      propertyPath: moveCounter
-      value: 48
-      objectReference: {fileID: 0}
     - target: {fileID: 4080499779369728718, guid: 37db2852949b983408cc58ae81e101d9,
         type: 3}
       propertyPath: groundTilemap
@@ -2835,6 +2834,7 @@ MonoBehaviour:
   directionAnim:
   - {fileID: 11400000, guid: 8398777824cebc84cb37379588b7e4f0, type: 2}
   - {fileID: 11400000, guid: 6feffac10f845db48a3d5d231a19aabe, type: 2}
+  PushBoxAnim: []
   currentState: Idle
 --- !u!114 &488095355
 MonoBehaviour:

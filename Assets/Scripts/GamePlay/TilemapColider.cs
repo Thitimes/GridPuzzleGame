@@ -35,7 +35,7 @@ public class TilemapColider : MonoBehaviour
             {
                 birdTilemap.SetTile(getGridPosition(direction), null);
             }
-            spineAnimation.playAnimation(direction);
+            spineAnimation.playWalkAnimation(direction);
             interpolatedMovement.MoveToTarget(transform.position + (Vector3)direction, () => { isMoving = false;});
 
             return true;

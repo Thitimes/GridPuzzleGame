@@ -24,11 +24,14 @@ public class PlayerController : MonoBehaviour
     private LevelLoader levelLoader;
     [SerializeField]
     private Color[] counterColor;
+    [SerializeField]
+    private SpineAnimationController spine;
 
 
 
     public bool isMoving = false;
-
+    private bool isPushing = false;
+    private Transform transformScale;
     private InterpolatedMovement interpolatedMovement;
 
     private int minusCounter = 1;
@@ -42,7 +45,7 @@ public class PlayerController : MonoBehaviour
         inputActions = new PlayerMovement();
         Counter.text = moveCounter.ToString();
         interpolatedMovement = gameObject.GetComponent<InterpolatedMovement>();
-        
+        transformScale = GetComponent<Transform>();
     }
 
     private void OnEnable()
@@ -74,14 +77,19 @@ public class PlayerController : MonoBehaviour
         if (CanMove(direction) && isMoving == false)
         {
             isMoving = true;
+            if (isPushing == false)
+            {
+                playMoveAnim(direction);
+            }
             interpolatedMovement.MoveToTarget(transform.position + (Vector3)direction, () => { isMoving = false; });
             if (IsOneWay == false)
             {
                 moveCounter--;
                 Counter.text = moveCounter.ToString();
             }
-
+            
         }
+        isPushing = false;
         if (moveCounter < 0)
         {
             //endgamehere
@@ -101,6 +109,11 @@ public class PlayerController : MonoBehaviour
                 if (!Box.Move(direction))
                 {
                     return false;
+                }
+                else
+                {
+                    isPushing = true;
+                    playPushAnim(direction);
                 }
             }
 
@@ -129,5 +142,32 @@ public class PlayerController : MonoBehaviour
         {
             Counter.color = counterColor[2];
         }
+    }
+
+    void playMoveAnim(Vector2 direction)
+    {
+        if (direction == new Vector2(-1, 0))
+        {
+            transform.localScale = new Vector3(1, 1, 1);      
+            
+        }
+        if (direction == new Vector2(1, 0))
+        {
+            transform.localScale = new Vector3(-1, 1, 1);
+        }
+        spine.playWalkAnimation(direction);
+    }
+    void playPushAnim(Vector2 direction)
+    {
+        if (direction == new Vector2(-1, 0))
+        {
+            transform.localScale = new Vector3(1, 1, 1);
+
+        }
+        if (direction == new Vector2(1, 0))
+        {
+            transform.localScale = new Vector3(-1, 1, 1);
+        }
+        spine.playPushAnimation(direction);
     }
 }
