@@ -225,6 +225,7 @@ MonoBehaviour:
   _runOnlyOnce: 1
   _sortingSelector: 0
   _sortingAxis: 1
+  _meshRenderer: {fileID: 0}
 --- !u!1 &121426598
 GameObject:
   m_ObjectHideFlags: 0
@@ -327,6 +328,7 @@ MonoBehaviour:
   _runOnlyOnce: 1
   _sortingSelector: 0
   _sortingAxis: 1
+  _meshRenderer: {fileID: 0}
 --- !u!114 &132141416 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3831810361076093472, guid: 7c1884c5ff9d55f469ea38ba7d240baa,
@@ -1015,6 +1017,7 @@ MonoBehaviour:
   _runOnlyOnce: 1
   _sortingSelector: 0
   _sortingAxis: 1
+  _meshRenderer: {fileID: 0}
 --- !u!1 &317864772
 GameObject:
   m_ObjectHideFlags: 0
@@ -1117,6 +1120,7 @@ MonoBehaviour:
   _runOnlyOnce: 1
   _sortingSelector: 0
   _sortingAxis: 1
+  _meshRenderer: {fileID: 0}
 --- !u!1 &434812836
 GameObject:
   m_ObjectHideFlags: 0
@@ -1269,6 +1273,7 @@ MonoBehaviour:
   _runOnlyOnce: 1
   _sortingSelector: 0
   _sortingAxis: 1
+  _meshRenderer: {fileID: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1720,6 +1725,7 @@ MonoBehaviour:
   _runOnlyOnce: 1
   _sortingSelector: 0
   _sortingAxis: 1
+  _meshRenderer: {fileID: 0}
 --- !u!1 &561982994
 GameObject:
   m_ObjectHideFlags: 0
@@ -1822,6 +1828,7 @@ MonoBehaviour:
   _runOnlyOnce: 1
   _sortingSelector: 0
   _sortingAxis: 1
+  _meshRenderer: {fileID: 0}
 --- !u!1 &612740058
 GameObject:
   m_ObjectHideFlags: 0
@@ -1924,6 +1931,7 @@ MonoBehaviour:
   _runOnlyOnce: 1
   _sortingSelector: 0
   _sortingAxis: 1
+  _meshRenderer: {fileID: 0}
 --- !u!1 &646098665
 GameObject:
   m_ObjectHideFlags: 0
@@ -2204,6 +2212,7 @@ MonoBehaviour:
   _runOnlyOnce: 1
   _sortingSelector: 0
   _sortingAxis: 1
+  _meshRenderer: {fileID: 0}
 --- !u!1 &681805695
 GameObject:
   m_ObjectHideFlags: 0
@@ -2306,6 +2315,106 @@ MonoBehaviour:
   _runOnlyOnce: 1
   _sortingSelector: 0
   _sortingAxis: 1
+  _meshRenderer: {fileID: 0}
+--- !u!1001 &689401757
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1038201778735952452, guid: 0fadc9c642b854b44a4d33571601f0cf,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1038201778735952452, guid: 0fadc9c642b854b44a4d33571601f0cf,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.283337
+      objectReference: {fileID: 0}
+    - target: {fileID: 1038201778735952452, guid: 0fadc9c642b854b44a4d33571601f0cf,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.283337
+      objectReference: {fileID: 0}
+    - target: {fileID: 1038201778735952452, guid: 0fadc9c642b854b44a4d33571601f0cf,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.283337
+      objectReference: {fileID: 0}
+    - target: {fileID: 1038201778735952452, guid: 0fadc9c642b854b44a4d33571601f0cf,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 11.99
+      objectReference: {fileID: 0}
+    - target: {fileID: 1038201778735952452, guid: 0fadc9c642b854b44a4d33571601f0cf,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1038201778735952452, guid: 0fadc9c642b854b44a4d33571601f0cf,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1038201778735952452, guid: 0fadc9c642b854b44a4d33571601f0cf,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1038201778735952452, guid: 0fadc9c642b854b44a4d33571601f0cf,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1038201778735952452, guid: 0fadc9c642b854b44a4d33571601f0cf,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1038201778735952452, guid: 0fadc9c642b854b44a4d33571601f0cf,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1038201778735952452, guid: 0fadc9c642b854b44a4d33571601f0cf,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1038201778735952452, guid: 0fadc9c642b854b44a4d33571601f0cf,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1038201778735952452, guid: 0fadc9c642b854b44a4d33571601f0cf,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1038201778735952455, guid: 0fadc9c642b854b44a4d33571601f0cf,
+        type: 3}
+      propertyPath: sceneName
+      value: VisualNovel 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1038201778735952455, guid: 0fadc9c642b854b44a4d33571601f0cf,
+        type: 3}
+      propertyPath: levelLoader
+      value: 
+      objectReference: {fileID: 761419788}
+    - target: {fileID: 1038201778735952456, guid: 0fadc9c642b854b44a4d33571601f0cf,
+        type: 3}
+      propertyPath: m_Name
+      value: BoxPrefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 1038201778735952459, guid: 0fadc9c642b854b44a4d33571601f0cf,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0fadc9c642b854b44a4d33571601f0cf, type: 3}
 --- !u!114 &761419788 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3831810360362933060, guid: 7c1884c5ff9d55f469ea38ba7d240baa,
@@ -2686,6 +2795,7 @@ MonoBehaviour:
   _runOnlyOnce: 1
   _sortingSelector: 0
   _sortingAxis: 1
+  _meshRenderer: {fileID: 0}
 --- !u!1 &1043759587
 GameObject:
   m_ObjectHideFlags: 0
@@ -2737,6 +2847,7 @@ MonoBehaviour:
   _runOnlyOnce: 1
   _sortingSelector: 0
   _sortingAxis: 1
+  _meshRenderer: {fileID: 0}
 --- !u!95 &1043759590
 Animator:
   serializedVersion: 3
@@ -2909,6 +3020,7 @@ MonoBehaviour:
   _runOnlyOnce: 1
   _sortingSelector: 0
   _sortingAxis: 1
+  _meshRenderer: {fileID: 0}
 --- !u!1 &1106899763
 GameObject:
   m_ObjectHideFlags: 0
@@ -3506,6 +3618,7 @@ MonoBehaviour:
   _runOnlyOnce: 1
   _sortingSelector: 0
   _sortingAxis: 1
+  _meshRenderer: {fileID: 0}
 --- !u!1 &1234056305
 GameObject:
   m_ObjectHideFlags: 0
@@ -3608,6 +3721,7 @@ MonoBehaviour:
   _runOnlyOnce: 1
   _sortingSelector: 0
   _sortingAxis: 1
+  _meshRenderer: {fileID: 0}
 --- !u!1 &1288883056
 GameObject:
   m_ObjectHideFlags: 0
@@ -3939,6 +4053,7 @@ MonoBehaviour:
   _runOnlyOnce: 1
   _sortingSelector: 0
   _sortingAxis: 1
+  _meshRenderer: {fileID: 0}
 --- !u!1 &1400019717
 GameObject:
   m_ObjectHideFlags: 0
@@ -4041,6 +4156,7 @@ MonoBehaviour:
   _runOnlyOnce: 1
   _sortingSelector: 0
   _sortingAxis: 1
+  _meshRenderer: {fileID: 0}
 --- !u!1 &1401630865
 GameObject:
   m_ObjectHideFlags: 0
@@ -4143,6 +4259,7 @@ MonoBehaviour:
   _runOnlyOnce: 1
   _sortingSelector: 0
   _sortingAxis: 1
+  _meshRenderer: {fileID: 0}
 --- !u!114 &1405955869 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7364823237666230188, guid: 16619360981500c4c9243540e68ed36a,
@@ -4241,6 +4358,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: box 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8330023144051735754, guid: 7cd1d24056c0c26478157b32ccf2c536,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7cd1d24056c0c26478157b32ccf2c536, type: 3}
@@ -4346,6 +4468,7 @@ MonoBehaviour:
   _runOnlyOnce: 1
   _sortingSelector: 0
   _sortingAxis: 1
+  _meshRenderer: {fileID: 0}
 --- !u!850595691 &1529882520
 LightingSettings:
   m_ObjectHideFlags: 0
@@ -5355,6 +5478,7 @@ MonoBehaviour:
   _runOnlyOnce: 1
   _sortingSelector: 0
   _sortingAxis: 1
+  _meshRenderer: {fileID: 0}
 --- !u!1 &1910797539
 GameObject:
   m_ObjectHideFlags: 0
@@ -5457,6 +5581,7 @@ MonoBehaviour:
   _runOnlyOnce: 1
   _sortingSelector: 0
   _sortingAxis: 1
+  _meshRenderer: {fileID: 0}
 --- !u!1 &1931322674
 GameObject:
   m_ObjectHideFlags: 0
@@ -5559,6 +5684,7 @@ MonoBehaviour:
   _runOnlyOnce: 1
   _sortingSelector: 0
   _sortingAxis: 1
+  _meshRenderer: {fileID: 0}
 --- !u!1 &1994626418
 GameObject:
   m_ObjectHideFlags: 0
@@ -5661,6 +5787,7 @@ MonoBehaviour:
   _runOnlyOnce: 1
   _sortingSelector: 0
   _sortingAxis: 1
+  _meshRenderer: {fileID: 0}
 --- !u!1 &2033132617
 GameObject:
   m_ObjectHideFlags: 0
@@ -5763,6 +5890,7 @@ MonoBehaviour:
   _runOnlyOnce: 1
   _sortingSelector: 0
   _sortingAxis: 1
+  _meshRenderer: {fileID: 0}
 --- !u!1 &2046709274
 GameObject:
   m_ObjectHideFlags: 0
@@ -5865,6 +5993,7 @@ MonoBehaviour:
   _runOnlyOnce: 1
   _sortingSelector: 0
   _sortingAxis: 1
+  _meshRenderer: {fileID: 0}
 --- !u!1 &2078302311
 GameObject:
   m_ObjectHideFlags: 0
@@ -5967,6 +6096,7 @@ MonoBehaviour:
   _runOnlyOnce: 1
   _sortingSelector: 0
   _sortingAxis: 1
+  _meshRenderer: {fileID: 0}
 --- !u!1 &2103516513
 GameObject:
   m_ObjectHideFlags: 0
@@ -6069,6 +6199,7 @@ MonoBehaviour:
   _runOnlyOnce: 1
   _sortingSelector: 0
   _sortingAxis: 1
+  _meshRenderer: {fileID: 0}
 --- !u!1001 &2135000629
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6155,6 +6286,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: box 1 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8330023144051735754, guid: 7cd1d24056c0c26478157b32ccf2c536,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7cd1d24056c0c26478157b32ccf2c536, type: 3}

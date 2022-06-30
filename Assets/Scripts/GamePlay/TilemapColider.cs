@@ -13,6 +13,8 @@ public class TilemapColider : MonoBehaviour
     private Tilemap birdTilemap;
     [SerializeField]
     private Tilemap collisionTilemap;
+    [SerializeField]
+    private SpineAnimationController spineAnimation;
 
     private InterpolatedMovement interpolatedMovement;
 
@@ -33,7 +35,9 @@ public class TilemapColider : MonoBehaviour
             {
                 birdTilemap.SetTile(getGridPosition(direction), null);
             }
-            interpolatedMovement.MoveToTarget(transform.position + (Vector3)direction, () => { isMoving = false; });
+            spineAnimation.playAnimation(direction);
+            interpolatedMovement.MoveToTarget(transform.position + (Vector3)direction, () => { isMoving = false;});
+
             return true;
         }
         return false;

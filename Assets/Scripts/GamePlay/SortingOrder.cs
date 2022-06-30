@@ -28,12 +28,18 @@ public class SortingOrder : MonoBehaviour
         private SortingAxis _sortingAxis = SortingAxis.Y;
 
         private Renderer _renderer;
+        [SerializeField]
+        private MeshRenderer _meshRenderer;
         private float _timeLeft;
         private float _updateFrequency = .1f;
 
         private void Awake()
         {
             _renderer = GetComponent<Renderer>();
+           if(TryGetComponent(out MeshRenderer meshRenderer))
+           {
+                _meshRenderer = meshRenderer;
+           }
         }
         private void Start()
         {
@@ -77,7 +83,13 @@ public class SortingOrder : MonoBehaviour
                         break;
                 }
                 float posFromAxis = _sortingAxis == SortingAxis.X ? pos.x : pos.y;
+            if (_meshRenderer != null)
+            {
+                
+                _meshRenderer.sortingOrder = (int)(_originOrder - posFromAxis / _precision + _offset);
+            }
                 _renderer.sortingOrder = (int)(_originOrder - posFromAxis / _precision + _offset);
+               
             }
         }
     }

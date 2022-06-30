@@ -21,6 +21,9 @@ EditorBuildSettings:
     path: Assets/Scenes/realgame/Stage1-2.unity
     guid: e6b01db15e762ef4fad0e697bb127e44
   - enabled: 1
+    path: Assets/Scenes/VisualNovel 1.unity
+    guid: 023a74cddb4f1154da6f25dc3011118f
+  - enabled: 1
     path: Assets/Scenes/realgame/stage2-1.unity
     guid: 96cb0910900c18e4996524fa6c3a9677
   - enabled: 1
@@ -32,4 +35,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/realgame/Stage2-4.unity
     guid: f4b4821347a6ddf409342c5c7d840a90
+  - enabled: 1
+    path: Assets/Scenes/VisualNovel 2.unity
+    guid: 308b14a2bc738d74cac3b9d462f6e8c3
+  - enabled: 1
+    path: Assets/Scenes/realgame/Stage3-1.unity
+    guid: 64734cc9b64c670469bba1c8c5d8157e
+  - enabled: 1
+    path: Assets/Scenes/Comic2.unity
+    guid: 188e8d965d673734f99a237e56aab4f6
   m_configObjects: {}
