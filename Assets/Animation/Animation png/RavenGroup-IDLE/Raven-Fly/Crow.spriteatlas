@@ -1,0 +1,85 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Crow
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 4096
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: 82408ea5ba3f3b843bf0adeb47ed18f1, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: ec1700d0920cce04580d216b839366b5, type: 3}
+  - {fileID: 21300000, guid: bbc2b401ce880b34f920cb314509da44, type: 3}
+  - {fileID: 21300000, guid: 5ef9e031e106cf34fb802030eaee72dd, type: 3}
+  - {fileID: 21300000, guid: 1e91dac1f053f8141a6da4f833c70aa8, type: 3}
+  - {fileID: 21300000, guid: 46c45ce14a9598841849c875fe58089f, type: 3}
+  - {fileID: 21300000, guid: 24b9d0f336609094bb5ac8bb0115893d, type: 3}
+  - {fileID: 21300000, guid: 9bac5524d0ae4ef4fb78fb1397116ff2, type: 3}
+  - {fileID: 21300000, guid: 5ffa9c86a8edb8040bfcbe5ce980054a, type: 3}
+  - {fileID: 21300000, guid: 34828b875e877aa4bb24e0a80198c6d8, type: 3}
+  - {fileID: 21300000, guid: b5fc7b9728b8808438be4829ddff8554, type: 3}
+  - {fileID: 21300000, guid: b8f7b138a90c6ef4699f539875a27a18, type: 3}
+  - {fileID: 21300000, guid: 3cac9cd84af480f4fb4d528384f02950, type: 3}
+  - {fileID: 21300000, guid: c214395ccd91e5a4b9173620518e7c07, type: 3}
+  - {fileID: 21300000, guid: 25226c3d7cee128458c4ee61fe97e060, type: 3}
+  - {fileID: 21300000, guid: 2bafb62eee9212d45880985c301cd117, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - Raven-Flying_10
+  - Raven-Flying_03
+  - Raven-Flying_09
+  - Raven-Flying_04
+  - Raven-Flying_05
+  - Raven-Flying_13
+  - Raven-Flying_00
+  - Raven-Flying_06
+  - Raven-Flying_14
+  - Raven-Flying_12
+  - Raven-Flying_07
+  - Raven-Flying_01
+  - Raven-Flying_08
+  - Raven-Flying_02
+  - Raven-Flying_11
+  m_RenderDataMap: {}
+  m_Tag: Crow
+  m_IsVariant: 0

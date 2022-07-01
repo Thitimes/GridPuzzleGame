@@ -119,6 +119,8 @@ MonoBehaviour:
     materialsInsideMask: []
     materialsOutsideMask: []
   disableRenderingOnOverride: 1
+  updateTiming: 1
+  unscaledTime: 0
   _animationName: 
   loop: 1
   timeScale: 1
@@ -138,7 +140,7 @@ MonoBehaviour:
   _precision: 1
   _offset: 0
   _runOnlyOnce: 0
-  _sortingSelector: 2
+  _sortingSelector: 1
   _sortingAxis: 1
   _meshRenderer: {fileID: 0}
 --- !u!114 &638023818
@@ -159,7 +161,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: af9b7c966a9ff0b4bb56be3d450e10ce, type: 2}
   - {fileID: 11400000, guid: af9b7c966a9ff0b4bb56be3d450e10ce, type: 2}
   PushBoxAnim:
-  - {fileID: 11400000, guid: 848c05126e08725499e04eb8a05d9234, type: 2}
+  - {fileID: 11400000, guid: 4f816ca790e3776498c7ef74e97a15e5, type: 2}
+  DeadAnim: {fileID: 11400000, guid: 45509d718409ed348b1aa1ae2cf48ec8, type: 2}
+  ShockAnim: {fileID: 11400000, guid: cc8a7515831812b4da3c4c5996d32774, type: 2}
   currentState: 
 --- !u!1 &4080499779369728719
 GameObject:
@@ -214,7 +218,7 @@ MonoBehaviour:
   collisionTilemap: {fileID: 0}
   birdTilemap: {fileID: 0}
   Counter: {fileID: 0}
-  moveCounter: 48
+  moveCounter: 999
   levelLoader: {fileID: 0}
   counterColor:
   - {r: 0.5131403, g: 1, b: 0, a: 1}

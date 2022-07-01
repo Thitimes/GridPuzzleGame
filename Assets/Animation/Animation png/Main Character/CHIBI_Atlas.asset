@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6b194f808b1af6499c93410e504af42, type: 3}
   m_Name: CHIBI_Atlas
   m_EditorClassIdentifier: 
-  atlasFile: {fileID: 4900000, guid: 29cffac5fe931ba489e0b78ffb32c9ef, type: 3}
+  atlasFile: {fileID: 4900000, guid: b9ab575a43c788d4c9cb173adebfb8f6, type: 3}
   materials:
   - {fileID: 2100000, guid: e9707d6ead41b7245be46b1a88d75726, type: 2}

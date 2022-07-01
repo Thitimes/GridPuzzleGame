@@ -31,7 +31,8 @@ public class PlayerController : MonoBehaviour
 
     public bool isMoving = false;
     private bool isPushing = false;
-    private Transform transformScale;
+    private bool isDead = false;
+
     private InterpolatedMovement interpolatedMovement;
 
     private int minusCounter = 1;
@@ -45,7 +46,6 @@ public class PlayerController : MonoBehaviour
         inputActions = new PlayerMovement();
         Counter.text = moveCounter.ToString();
         interpolatedMovement = gameObject.GetComponent<InterpolatedMovement>();
-        transformScale = GetComponent<Transform>();
     }
 
     private void OnEnable()
@@ -66,7 +66,12 @@ public class PlayerController : MonoBehaviour
 
     public void RestartScene()
     {
-        levelLoader.LoadScene(0);
+        if (isDead == false)
+        {
+            isDead = true;
+            isMoving = true;
+            PlayDeadAnim();
+        }
     }
 
 
@@ -74,9 +79,17 @@ public class PlayerController : MonoBehaviour
     {
 
         changeCounterColor();
+       
         if (CanMove(direction) && isMoving == false)
         {
             isMoving = true;
+            if (moveCounter <= 0 && isDead ==false)
+            {
+                RestartScene();
+
+                return;
+            }
+
             if (isPushing == false)
             {
                 playMoveAnim(direction);
@@ -90,11 +103,7 @@ public class PlayerController : MonoBehaviour
             
         }
         isPushing = false;
-        if (moveCounter < 0)
-        {
-            //endgamehere
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        }
+      
     }
 
     private bool CanMove(Vector2 direction)
@@ -121,6 +130,8 @@ public class PlayerController : MonoBehaviour
         }
         if (birdTilemap.HasTile(gridPosition) && isMoving == false)
         {
+            interpolatedMovement.MoveToTarget(transform.position + (Vector3)direction);
+            playShockAnim();
             birdTilemap.SetTile(gridPosition, null);
             moveCounter -= minusCounter;
         }
@@ -169,5 +180,30 @@ public class PlayerController : MonoBehaviour
             transform.localScale = new Vector3(-1, 1, 1);
         }
         spine.playPushAnimation(direction);
+    }
+
+    void PlayDeadAnim()
+    {
+        StartCoroutine(DeadAnim());
+    }
+    IEnumerator DeadAnim()
+    {
+        spine.playDeadAnimation();
+        yield return new WaitForSeconds(2.2f);
+        levelLoader.LoadScene(0);
+    }
+
+    void playShockAnim()
+    {
+        StartCoroutine(ShockAnim());
+    }
+    IEnumerator ShockAnim()
+    {
+        isMoving = true;
+        spine.playShockAnimation();
+        yield return new WaitForSeconds(0.8f);
+        spine.SetCharacterIdle();
+        isMoving = false;
+        
     }
 }

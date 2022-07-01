@@ -10,6 +10,8 @@ public class SpineAnimationController : MonoBehaviour
     public AnimationReferenceAsset idle;
     public AnimationReferenceAsset[] directionAnim;
     public AnimationReferenceAsset[] PushBoxAnim;
+    public AnimationReferenceAsset DeadAnim;
+    public AnimationReferenceAsset ShockAnim;
     public string currentState;
 
     private void Start()
@@ -47,20 +49,34 @@ public class SpineAnimationController : MonoBehaviour
     {
         StartCoroutine(playWalkAnim(direction));
     }
+
     public void playPushAnimation(Vector2 direction)
     {
         StartCoroutine(PushAnim(direction));
     }
+
+    public void playDeadAnimation()
+    {
+        SetAnimation(DeadAnim, false, 1f);
+    }
+
+    public void playShockAnimation()
+    {
+        SetAnimation(ShockAnim, false, 1f);
+    }
+
     IEnumerator playWalkAnim(Vector2 direction)
     {
         SetCharacterByDirection(direction);
         yield return new WaitForSeconds(0.3f);
         SetCharacterIdle();
     }
+
     IEnumerator PushAnim(Vector2 direction)
     {
         SetAnimation(PushBoxAnim[0], false, 1f);
         yield return new WaitForSeconds(0.45f);
         SetCharacterIdle();
     }
+
 }
