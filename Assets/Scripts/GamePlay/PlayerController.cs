@@ -26,6 +26,8 @@ public class PlayerController : MonoBehaviour
     private Color[] counterColor;
     [SerializeField]
     private SpineAnimationController spine;
+    [SerializeField]
+    private ParticleSystem particle;
 
 
 
@@ -35,7 +37,7 @@ public class PlayerController : MonoBehaviour
 
     private InterpolatedMovement interpolatedMovement;
 
-    private int minusCounter = 1;
+    private int minusCounter = 2;
 
     private PlayerMovement inputActions;
 
@@ -66,7 +68,7 @@ public class PlayerController : MonoBehaviour
 
     public void RestartScene()
     {
-        if (isDead == false)
+        if (isMoving == false)
         {
             isDead = true;
             isMoving = true;
@@ -83,6 +85,7 @@ public class PlayerController : MonoBehaviour
         if (CanMove(direction) && isMoving == false)
         {
             isMoving = true;
+            isDead = true;
             if (moveCounter <= 0 && isDead ==false)
             {
                 RestartScene();
@@ -103,7 +106,8 @@ public class PlayerController : MonoBehaviour
             
         }
         isPushing = false;
-      
+        isDead = false;
+
     }
 
     private bool CanMove(Vector2 direction)
@@ -130,10 +134,16 @@ public class PlayerController : MonoBehaviour
         }
         if (birdTilemap.HasTile(gridPosition) && isMoving == false)
         {
+            moveCounter -= minusCounter;
+            particle.Clear();
+            Counter.text = moveCounter.ToString();
+            particle.transform.position = this.transform.position + (Vector3)direction;
+            particle.Play();
             interpolatedMovement.MoveToTarget(transform.position + (Vector3)direction);
             playShockAnim();
             birdTilemap.SetTile(gridPosition, null);
-            moveCounter -= minusCounter;
+            
+            
         }
         if (!groundTilemap.HasTile(gridPosition) || collisionTilemap.HasTile(gridPosition) || doorTilemap.HasTile(gridPosition))
         {
@@ -142,7 +152,6 @@ public class PlayerController : MonoBehaviour
         return true;
     }
     
-
   private void changeCounterColor()
     {
         if(moveCounter == 20)
@@ -193,8 +202,9 @@ public class PlayerController : MonoBehaviour
         levelLoader.LoadScene(0);
     }
 
-    void playShockAnim()
+   public  void playShockAnim()
     {
+        
         StartCoroutine(ShockAnim());
     }
     IEnumerator ShockAnim()
