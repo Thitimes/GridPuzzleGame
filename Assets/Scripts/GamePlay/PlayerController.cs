@@ -34,6 +34,7 @@ public class PlayerController : MonoBehaviour
     public bool isMoving = false;
     private bool isPushing = false;
     private bool isDead = false;
+    private bool isShock = false;
 
     private InterpolatedMovement interpolatedMovement;
 
@@ -48,7 +49,11 @@ public class PlayerController : MonoBehaviour
         inputActions = new PlayerMovement();
         Counter.text = moveCounter.ToString();
         interpolatedMovement = gameObject.GetComponent<InterpolatedMovement>();
-    }
+        isMoving = false;
+        isPushing = false;
+        isDead = false;
+        isShock = false;
+}
 
     private void OnEnable()
     {
@@ -85,7 +90,6 @@ public class PlayerController : MonoBehaviour
         if (CanMove(direction) && isMoving == false)
         {
             isMoving = true;
-            isDead = true;
             if (moveCounter <= 0 && isDead ==false)
             {
                 RestartScene();
@@ -93,7 +97,7 @@ public class PlayerController : MonoBehaviour
                 return;
             }
 
-            if (isPushing == false)
+            if (isPushing == false && isShock == false && isDead == false)
             {
                 playMoveAnim(direction);
             }
@@ -106,7 +110,6 @@ public class PlayerController : MonoBehaviour
             
         }
         isPushing = false;
-        isDead = false;
 
     }
 
@@ -134,6 +137,7 @@ public class PlayerController : MonoBehaviour
         }
         if (birdTilemap.HasTile(gridPosition) && isMoving == false)
         {
+            isShock = true;
             moveCounter -= minusCounter;
             particle.Clear();
             Counter.text = moveCounter.ToString();
@@ -152,6 +156,12 @@ public class PlayerController : MonoBehaviour
         return true;
     }
     
+    public void playCrowParticle( Vector2 direction)
+    {
+        particle.Clear();
+        particle.transform.position = this.transform.position + (Vector3)direction;
+        particle.Play();
+    }
   private void changeCounterColor()
     {
         if(moveCounter == 20)
@@ -175,7 +185,8 @@ public class PlayerController : MonoBehaviour
         {
             transform.localScale = new Vector3(-1, 1, 1);
         }
-        spine.playWalkAnimation(direction);
+            spine.playWalkAnimation(direction);
+        
     }
     void playPushAnim(Vector2 direction)
     {
@@ -214,6 +225,7 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForSeconds(0.8f);
         spine.SetCharacterIdle();
         isMoving = false;
+        isShock = false;
         
     }
 }

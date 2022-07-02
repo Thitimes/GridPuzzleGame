@@ -15,6 +15,8 @@ public class TilemapColider : MonoBehaviour
     private Tilemap collisionTilemap;
     [SerializeField]
     private SpineAnimationController spineAnimation;
+    [SerializeField]
+    ParticleSystem particle;
 
     private InterpolatedMovement interpolatedMovement;
 
@@ -33,6 +35,9 @@ public class TilemapColider : MonoBehaviour
             isMoving = true;
             if (birdTilemap.HasTile(getGridPosition(direction)))
             {
+                particle.Clear();
+                particle.transform.position = this.transform.position + (Vector3)direction;
+                particle.Play();
                 birdTilemap.SetTile(getGridPosition(direction), null);
             }
             spineAnimation.playWalkAnimation(direction);

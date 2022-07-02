@@ -10,6 +10,7 @@ public class VNmanager : MonoBehaviour
     public LevelLoader levelLoader;
     public BottomBarController bottomBar;
     public GameObject choiceSelection;
+    public GameObject boxAnswer;
     private State state = State.IDLE;
     [SerializeField]
     private bool changeScene = false;
@@ -45,13 +46,12 @@ public class VNmanager : MonoBehaviour
     {
         if (state == State.IDLE && bottomBar.IsCompleted())
         {
-            
 
             if (changeScene == true && bottomBar.IsLastSentence())
             {
                 levelLoader.LoadScene(NextUnityScene);
             }
-            else if(bottomBar.IsLastSentence()&& changeScene == false)
+            else if (bottomBar.IsLastSentence() && changeScene == false && boxAnswer.activeInHierarchy == false) 
             {
                 PlaySceneButton();   
             
@@ -61,7 +61,7 @@ public class VNmanager : MonoBehaviour
         }
     }
 
-    private void PlaySceneButton()
+    public void PlaySceneButton()
     {
         StartCoroutine(SwitchToButton());
     }
@@ -71,16 +71,23 @@ public class VNmanager : MonoBehaviour
         StartCoroutine(ChangeToNextScene(scene));
         NextUnityScene = currentScene.nextScene[Random.Range(0,currentScene.nextScene.Length)];
     }
-
+    public void ChangeToBoxAnswer()
+    {
+        StartCoroutine(ChangeToAnsBox());
+    }
     private IEnumerator SwitchToButton()
     {
         state = State.ANIMATE;
  
         bottomBar.Hide();
         bottomBar.currentImage.SetActive(false);
+        if(boxAnswer != null)
+        {
+            boxAnswer.SetActive(false);
+        }
         yield return new WaitForSeconds(1f);
         bottomBar.ClearText();
-        if (changeScene == false)
+        if (changeScene == false && boxAnswer.activeInHierarchy == false)
         {
             choiceSelection.SetActive(true);
         }
@@ -92,6 +99,7 @@ public class VNmanager : MonoBehaviour
         state = State.ANIMATE;
         currentScene = scene;
         choiceSelection.SetActive(false);
+        boxAnswer.SetActive(false);
         bottomBar.ClearText();
         bottomBar.Show();
         bottomBar.currentImage.SetActive(true);
@@ -100,6 +108,16 @@ public class VNmanager : MonoBehaviour
         state = State.IDLE;
         
         
+    }
+
+    private IEnumerator ChangeToAnsBox()
+    {
+        state = State.ANIMATE;
+
+        choiceSelection.SetActive(false);
+        boxAnswer.SetActive(true);
+        yield return new WaitForSeconds(1f);
+        state = State.IDLE;
     }
     public void changeBackInput()
     {
