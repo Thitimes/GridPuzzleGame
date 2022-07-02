@@ -1670,7 +1670,7 @@ MonoBehaviour:
   _precision: 1
   _offset: 0
   _runOnlyOnce: 1
-  _sortingSelector: 0
+  _sortingSelector: 1
   _sortingAxis: 1
   _meshRenderer: {fileID: 0}
 --- !u!95 &656617535
@@ -5965,7 +5965,7 @@ PrefabInstance:
     - target: {fileID: 5881520234311078667, guid: 7c1884c5ff9d55f469ea38ba7d240baa,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c1884c5ff9d55f469ea38ba7d240baa, type: 3}

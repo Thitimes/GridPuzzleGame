@@ -1,37 +1,34 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class InputManaager : MonoBehaviour
 {
     public string Answer;
     public VNmanager vnManager;
+    public TMP_InputField inputString;
     public StoryScene story;
-    private string InputString;
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    private CorrectAnswer correctAnswer;
 
-    // Update is called once per frame
-    void Update()
+    private void Awake()
     {
-        
+        if (GameObject.Find("CorrectAnswer"))
+        {
+            correctAnswer = GameObject.Find("CorrectAnswer").GetComponent<CorrectAnswer>();
+        }
+        inputString.onValidateInput +=
+         delegate (string s, int i, char c) { return char.ToUpper(c); };
     }
-
-    public void ReadStringInput(string s)
-    {
-        
-        InputString = s;
-        Debug.Log(InputString);
-    }
-
     public void CheckInputAnswer()
     {
-        if(InputString == Answer)
+        if(inputString.text == Answer.ToUpper())
         {
+            if(correctAnswer != null)
+            {
+                correctAnswer.setBool(true);
+            }
             //change bool condition
             vnManager.PlayAfterButton(story);
         }

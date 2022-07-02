@@ -34,6 +34,8 @@ public class VNmanager : MonoBehaviour
     }
     private void Awake()
     {
+       
+        
         inputActions = new PlayerMovement();
         inputActions.UI.Click.performed += ctx => NextSentence();
     }
@@ -41,6 +43,7 @@ public class VNmanager : MonoBehaviour
     {
         bottomBar.PlayScene(currentScene);
         NextUnityScene = nextSceneToLoad[Random.Range(0,nextSceneToLoad.Length)];
+        bottomBar.PlayNextSentence();
     }
     private void NextSentence()
     {
@@ -69,6 +72,7 @@ public class VNmanager : MonoBehaviour
     {
         changeScene = true;
         StartCoroutine(ChangeToNextScene(scene));
+        bottomBar.PlayNextSentence();
         NextUnityScene = currentScene.nextScene[Random.Range(0,currentScene.nextScene.Length)];
     }
     public void ChangeToBoxAnswer()

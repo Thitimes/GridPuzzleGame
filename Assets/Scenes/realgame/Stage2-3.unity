@@ -2759,7 +2759,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 11
+  m_SortingOrder: 101
   m_Sprite: {fileID: -3499347185160870777, guid: 9c6c3fcab25d13146a18c4062c5fd380,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -2793,7 +2793,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 521909277}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2e13de83395ab61408b065674f38f8e4, type: 3}
   m_Name: 
@@ -2802,7 +2802,7 @@ MonoBehaviour:
   _precision: 1
   _offset: 0
   _runOnlyOnce: 1
-  _sortingSelector: 1
+  _sortingSelector: 2
   _sortingAxis: 1
   _meshRenderer: {fileID: 0}
 --- !u!1001 &532335131
@@ -3197,7 +3197,7 @@ MonoBehaviour:
   _precision: 1
   _offset: 0
   _runOnlyOnce: 1
-  _sortingSelector: 0
+  _sortingSelector: 1
   _sortingAxis: 1
   _meshRenderer: {fileID: 0}
 --- !u!95 &591427979
@@ -4480,7 +4480,7 @@ MonoBehaviour:
   _precision: 1
   _offset: 0
   _runOnlyOnce: 1
-  _sortingSelector: 0
+  _sortingSelector: 1
   _sortingAxis: 1
   _meshRenderer: {fileID: 0}
 --- !u!1 &1214814149
@@ -5079,17 +5079,17 @@ PrefabInstance:
     - target: {fileID: 1595318442363234262, guid: cd62cec80f2d2874a81ec76bf563f2f5,
         type: 3}
       propertyPath: m_AnimatedTiles.Array.data[0].second.m_AnimationSpeed
-      value: 13.057833
+      value: 12.660414
       objectReference: {fileID: 0}
     - target: {fileID: 1595318442363234262, guid: cd62cec80f2d2874a81ec76bf563f2f5,
         type: 3}
       propertyPath: m_AnimatedTiles.Array.data[1].second.m_AnimationSpeed
-      value: 12.311789
+      value: 13.511967
       objectReference: {fileID: 0}
     - target: {fileID: 1595318442363234262, guid: cd62cec80f2d2874a81ec76bf563f2f5,
         type: 3}
       propertyPath: m_AnimatedTiles.Array.data[2].second.m_AnimationSpeed
-      value: 13.236263
+      value: 13.73184
       objectReference: {fileID: 0}
     - target: {fileID: 1595318442363234262, guid: cd62cec80f2d2874a81ec76bf563f2f5,
         type: 3}

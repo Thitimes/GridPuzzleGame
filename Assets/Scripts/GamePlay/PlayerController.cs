@@ -36,6 +36,7 @@ public class PlayerController : MonoBehaviour
     private bool isDead = false;
     private bool isShock = false;
 
+    private CorrectAnswer correctAnswer;
     private InterpolatedMovement interpolatedMovement;
 
     private int minusCounter = 2;
@@ -49,11 +50,27 @@ public class PlayerController : MonoBehaviour
         inputActions = new PlayerMovement();
         Counter.text = moveCounter.ToString();
         interpolatedMovement = gameObject.GetComponent<InterpolatedMovement>();
+        if (GameObject.Find("CorrectAnswer"))
+        {
+            correctAnswer = GameObject.Find("CorrectAnswer").GetComponent<CorrectAnswer>();
+        }
+        if(correctAnswer != null && correctAnswer.getBool() == true)
+        {
+            moveCounter += 2;
+            Counter.text = moveCounter.ToString();
+        }
         isMoving = false;
         isPushing = false;
         isDead = false;
         isShock = false;
-}
+        if (TryGetComponent(out CorrectAnswer answer))
+        {
+            if (answer.getBool() == true)
+            {
+                moveCounter += 2;
+            }
+        }
+    }
 
     private void OnEnable()
     {
@@ -138,6 +155,7 @@ public class PlayerController : MonoBehaviour
         if (birdTilemap.HasTile(gridPosition) && isMoving == false)
         {
             isShock = true;
+            changeScale(direction);
             moveCounter -= minusCounter;
             particle.Clear();
             Counter.text = moveCounter.ToString();
@@ -176,19 +194,16 @@ public class PlayerController : MonoBehaviour
 
     void playMoveAnim(Vector2 direction)
     {
-        if (direction == new Vector2(-1, 0))
-        {
-            transform.localScale = new Vector3(1, 1, 1);      
-            
-        }
-        if (direction == new Vector2(1, 0))
-        {
-            transform.localScale = new Vector3(-1, 1, 1);
-        }
+        changeScale(direction);
             spine.playWalkAnimation(direction);
         
     }
     void playPushAnim(Vector2 direction)
+    {
+        changeScale(direction);
+        spine.playPushAnimation(direction);
+    }
+    void changeScale(Vector2 direction)
     {
         if (direction == new Vector2(-1, 0))
         {
@@ -199,9 +214,7 @@ public class PlayerController : MonoBehaviour
         {
             transform.localScale = new Vector3(-1, 1, 1);
         }
-        spine.playPushAnimation(direction);
     }
-
     void PlayDeadAnim()
     {
         StartCoroutine(DeadAnim());
