@@ -314,6 +314,11 @@ PrefabInstance:
       objectReference: {fileID: 1355205756}
     - target: {fileID: 4080499779369728718, guid: 37db2852949b983408cc58ae81e101d9,
         type: 3}
+      propertyPath: moveCounter
+      value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 4080499779369728718, guid: 37db2852949b983408cc58ae81e101d9,
+        type: 3}
       propertyPath: groundTilemap
       value: 
       objectReference: {fileID: 304285363}
@@ -2836,6 +2841,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 6feffac10f845db48a3d5d231a19aabe, type: 2}
   PushBoxAnim: []
   DeadAnim: {fileID: 0}
+  ShockAnim: {fileID: 0}
   currentState: Idle
 --- !u!114 &488095355
 MonoBehaviour:

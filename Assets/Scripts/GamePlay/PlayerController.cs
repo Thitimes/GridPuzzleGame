@@ -107,12 +107,7 @@ public class PlayerController : MonoBehaviour
         if (CanMove(direction) && isMoving == false)
         {
             isMoving = true;
-            if (moveCounter <= 0 && isDead ==false)
-            {
-                RestartScene();
-
-                return;
-            }
+            checkDeadCheckMove();
 
             if (isPushing == false && isShock == false && isDead == false)
             {
@@ -136,7 +131,7 @@ public class PlayerController : MonoBehaviour
         
         if (hit2D = Physics2D.Raycast(transform.position, direction, 1f))
         {
-            if (hit2D.collider.tag == "box" && isMoving == false)
+            if (hit2D.collider.tag == "box" && isMoving == false && moveCounter >0)
             {
                 TilemapColider Box = hit2D.collider.GetComponent<TilemapColider>();
                 if (!Box.Move(direction))
@@ -162,8 +157,10 @@ public class PlayerController : MonoBehaviour
             particle.transform.position = this.transform.position + (Vector3)direction;
             particle.Play();
             interpolatedMovement.MoveToTarget(transform.position + (Vector3)direction);
+            checkDeadCheckMove();
             playShockAnim();
             birdTilemap.SetTile(gridPosition, null);
+            
             
             
         }
@@ -172,6 +169,16 @@ public class PlayerController : MonoBehaviour
             return false;
         }
         return true;
+    }
+
+    private void checkDeadCheckMove()
+    {
+        if (moveCounter <= 0 && isDead == false)
+        {
+            PlayDeadAnim();
+
+            return;
+        }
     }
     
     public void playCrowParticle( Vector2 direction)
@@ -195,13 +202,13 @@ public class PlayerController : MonoBehaviour
     void playMoveAnim(Vector2 direction)
     {
         changeScale(direction);
-            spine.playWalkAnimation(direction);
+        playWalkAnimation(direction);
         
     }
     void playPushAnim(Vector2 direction)
     {
         changeScale(direction);
-        spine.playPushAnimation(direction);
+        StartCoroutine(playPushAnim());
     }
     void changeScale(Vector2 direction)
     {
@@ -221,6 +228,7 @@ public class PlayerController : MonoBehaviour
     }
     IEnumerator DeadAnim()
     {
+        isDead = true;
         spine.playDeadAnimation();
         yield return new WaitForSeconds(2.2f);
         levelLoader.LoadScene(0);
@@ -231,14 +239,51 @@ public class PlayerController : MonoBehaviour
         
         StartCoroutine(ShockAnim());
     }
+    public void playWalkAnimation(Vector2 direction)
+    {
+        StartCoroutine(playWalkAnim(direction));
+    }
     IEnumerator ShockAnim()
     {
         isMoving = true;
         spine.playShockAnimation();
         yield return new WaitForSeconds(0.8f);
-        spine.SetCharacterIdle();
+        if (isDead == true)
+        {
+            PlayDeadAnim();
+        }
+        else
+        {
+            spine.SetCharacterIdle();
+        }
         isMoving = false;
         isShock = false;
         
+    }
+    IEnumerator playPushAnim()
+    {
+        spine.SetAnimation(spine.PushBoxAnim[0], false, 1f);
+        yield return new WaitForSeconds(0.45f);
+        if (isDead == true)
+        {
+            PlayDeadAnim();
+        }
+        else
+        {
+            spine.SetCharacterIdle();
+        }
+    }
+    IEnumerator playWalkAnim(Vector2 direction)
+    {
+        spine.SetCharacterByDirection(direction);
+        yield return new WaitForSeconds(0.3f);
+        if (isDead == true)
+        {
+            PlayDeadAnim();
+        }
+        else
+        {
+            spine.SetCharacterIdle();
+        }
     }
 }

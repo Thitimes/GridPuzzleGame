@@ -5079,17 +5079,17 @@ PrefabInstance:
     - target: {fileID: 1595318442363234262, guid: cd62cec80f2d2874a81ec76bf563f2f5,
         type: 3}
       propertyPath: m_AnimatedTiles.Array.data[0].second.m_AnimationSpeed
-      value: 12.660414
+      value: 13.60083
       objectReference: {fileID: 0}
     - target: {fileID: 1595318442363234262, guid: cd62cec80f2d2874a81ec76bf563f2f5,
         type: 3}
       propertyPath: m_AnimatedTiles.Array.data[1].second.m_AnimationSpeed
-      value: 13.511967
+      value: 12.106588
       objectReference: {fileID: 0}
     - target: {fileID: 1595318442363234262, guid: cd62cec80f2d2874a81ec76bf563f2f5,
         type: 3}
       propertyPath: m_AnimatedTiles.Array.data[2].second.m_AnimationSpeed
-      value: 13.73184
+      value: 13.393684
       objectReference: {fileID: 0}
     - target: {fileID: 1595318442363234262, guid: cd62cec80f2d2874a81ec76bf563f2f5,
         type: 3}
@@ -6788,7 +6788,7 @@ PrefabInstance:
     - target: {fileID: 4080499779369728718, guid: 37db2852949b983408cc58ae81e101d9,
         type: 3}
       propertyPath: moveCounter
-      value: 999
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4080499779369728718, guid: 37db2852949b983408cc58ae81e101d9,
         type: 3}

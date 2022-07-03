@@ -9,22 +9,23 @@ public class MapExit : MonoBehaviour
     private string sceneName;
     [SerializeField]
     private LevelLoader levelLoader;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField]
+    private bool islastLevel;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    [SerializeField]
+    private CheckGameStatus checkGame;
+    // Start is called before the first frame update
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
             levelLoader.LoadScene(sceneName);
+        }
+        if (islastLevel)
+        {
+            checkGame.EndGame();
+            checkGame.SaveData();
         }
     }
 }
