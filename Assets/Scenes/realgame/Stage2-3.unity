@@ -1184,6 +1184,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1038201778735952454, guid: 0fadc9c642b854b44a4d33571601f0cf,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 1.6202229
+      objectReference: {fileID: 0}
+    - target: {fileID: 1038201778735952454, guid: 0fadc9c642b854b44a4d33571601f0cf,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 2.553745
+      objectReference: {fileID: 0}
     - target: {fileID: 1038201778735952455, guid: 0fadc9c642b854b44a4d33571601f0cf,
         type: 3}
       propertyPath: sceneName
@@ -2814,35 +2824,55 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 185560255, guid: 7c1884c5ff9d55f469ea38ba7d240baa, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.209
+      value: 0.20600002
       objectReference: {fileID: 0}
     - target: {fileID: 185560255, guid: 7c1884c5ff9d55f469ea38ba7d240baa, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0.84700006
+      value: 0.84800005
       objectReference: {fileID: 0}
     - target: {fileID: 185560255, guid: 7c1884c5ff9d55f469ea38ba7d240baa, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0.15252085
+      value: 0.15052085
       objectReference: {fileID: 0}
     - target: {fileID: 185560255, guid: 7c1884c5ff9d55f469ea38ba7d240baa, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0.7844881
+      value: 0.7835615
       objectReference: {fileID: 0}
     - target: {fileID: 185560255, guid: 7c1884c5ff9d55f469ea38ba7d240baa, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 31.080002
+      value: 1.9999466
       objectReference: {fileID: 0}
     - target: {fileID: 185560255, guid: 7c1884c5ff9d55f469ea38ba7d240baa, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 55.152
+      value: -1.9999695
       objectReference: {fileID: 0}
     - target: {fileID: 185560255, guid: 7c1884c5ff9d55f469ea38ba7d240baa, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -1.8000488
+      value: -0.20007324
       objectReference: {fileID: 0}
     - target: {fileID: 185560255, guid: 7c1884c5ff9d55f469ea38ba7d240baa, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 8.299988
+      value: -0.000030517578
+      objectReference: {fileID: 0}
+    - target: {fileID: 185560256, guid: 7c1884c5ff9d55f469ea38ba7d240baa, type: 3}
+      propertyPath: m_fontSize
+      value: 68.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 185560256, guid: 7c1884c5ff9d55f469ea38ba7d240baa, type: 3}
+      propertyPath: m_margin.w
+      value: -0.004722593
+      objectReference: {fileID: 0}
+    - target: {fileID: 185560256, guid: 7c1884c5ff9d55f469ea38ba7d240baa, type: 3}
+      propertyPath: m_margin.x
+      value: 1.2397575
+      objectReference: {fileID: 0}
+    - target: {fileID: 185560256, guid: 7c1884c5ff9d55f469ea38ba7d240baa, type: 3}
+      propertyPath: m_margin.y
+      value: 0.3567295
+      objectReference: {fileID: 0}
+    - target: {fileID: 185560256, guid: 7c1884c5ff9d55f469ea38ba7d240baa, type: 3}
+      propertyPath: m_margin.z
+      value: 1.1051826
       objectReference: {fileID: 0}
     - target: {fileID: 324779819, guid: 7c1884c5ff9d55f469ea38ba7d240baa, type: 3}
       propertyPath: m_AnchorMax.x
@@ -5079,17 +5109,17 @@ PrefabInstance:
     - target: {fileID: 1595318442363234262, guid: cd62cec80f2d2874a81ec76bf563f2f5,
         type: 3}
       propertyPath: m_AnimatedTiles.Array.data[0].second.m_AnimationSpeed
-      value: 13.60083
+      value: 12.634405
       objectReference: {fileID: 0}
     - target: {fileID: 1595318442363234262, guid: cd62cec80f2d2874a81ec76bf563f2f5,
         type: 3}
       propertyPath: m_AnimatedTiles.Array.data[1].second.m_AnimationSpeed
-      value: 12.106588
+      value: 12.974754
       objectReference: {fileID: 0}
     - target: {fileID: 1595318442363234262, guid: cd62cec80f2d2874a81ec76bf563f2f5,
         type: 3}
       propertyPath: m_AnimatedTiles.Array.data[2].second.m_AnimationSpeed
-      value: 13.393684
+      value: 13.9305935
       objectReference: {fileID: 0}
     - target: {fileID: 1595318442363234262, guid: cd62cec80f2d2874a81ec76bf563f2f5,
         type: 3}
@@ -6788,7 +6818,7 @@ PrefabInstance:
     - target: {fileID: 4080499779369728718, guid: 37db2852949b983408cc58ae81e101d9,
         type: 3}
       propertyPath: moveCounter
-      value: 10
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 4080499779369728718, guid: 37db2852949b983408cc58ae81e101d9,
         type: 3}

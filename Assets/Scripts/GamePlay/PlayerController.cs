@@ -104,10 +104,10 @@ public class PlayerController : MonoBehaviour
 
         changeCounterColor();
        
-        if (CanMove(direction) && isMoving == false)
+        if (CanMove(direction) && isMoving == false && isDead == false)
         {
             isMoving = true;
-            checkDeadCheckMove();
+           
 
             if (isPushing == false && isShock == false && isDead == false)
             {
@@ -118,10 +118,11 @@ public class PlayerController : MonoBehaviour
             {
                 moveCounter--;
                 Counter.text = moveCounter.ToString();
+                checkDeadCheckMove();
             }
             
         }
-        isPushing = false;
+       
 
     }
 
@@ -255,15 +256,16 @@ public class PlayerController : MonoBehaviour
         else
         {
             spine.SetCharacterIdle();
+            isMoving = false;
         }
-        isMoving = false;
+        
         isShock = false;
         
     }
     IEnumerator playPushAnim()
     {
         spine.SetAnimation(spine.PushBoxAnim[0], false, 1f);
-        yield return new WaitForSeconds(0.45f);
+        yield return new WaitForSeconds(0.55f);
         if (isDead == true)
         {
             PlayDeadAnim();
@@ -271,6 +273,8 @@ public class PlayerController : MonoBehaviour
         else
         {
             spine.SetCharacterIdle();
+            isMoving = false;
+            isPushing = false;
         }
     }
     IEnumerator playWalkAnim(Vector2 direction)
