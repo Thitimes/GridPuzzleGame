@@ -104,7 +104,7 @@ public class PlayerController : MonoBehaviour
 
         changeCounterColor();
        
-        if (CanMove(direction) && isMoving == false && isDead == false)
+        if (CanMove(direction,IsOneWay) && isMoving == false && isDead == false)
         {
             isMoving = true;
            
@@ -113,20 +113,21 @@ public class PlayerController : MonoBehaviour
             {
                 playMoveAnim(direction);
             }
-            interpolatedMovement.MoveToTarget(transform.position + (Vector3)direction, () => { isMoving = false; });
+            
             if (IsOneWay == false)
             {
                 moveCounter--;
                 Counter.text = moveCounter.ToString();
                 checkDeadCheckMove();
             }
-            
+            interpolatedMovement.MoveToTarget(transform.position + (Vector3)direction, () => { isMoving = false; });
+
         }
        
 
     }
 
-    private bool CanMove(Vector2 direction)
+    private bool CanMove(Vector2 direction, bool IsOneWay = false)
     {
         Vector3Int gridPosition = groundTilemap.WorldToCell(transform.position + (Vector3)direction);
         
@@ -141,8 +142,19 @@ public class PlayerController : MonoBehaviour
                 }
                 else
                 {
-                    isPushing = true;
+                    isMoving = true;
                     playPushAnim(direction);
+                    interpolatedMovement.MoveToTarget(transform.position + (Vector3)direction, () => { isMoving = false; });
+                    if (IsOneWay == false)
+                    {
+                        moveCounter--;
+                        Counter.text = moveCounter.ToString();
+                        checkDeadCheckMove();
+                    }
+                    if (isMoving == false )
+                    {
+                        spine.SetCharacterIdle();
+                    }
                 }
             }
 
@@ -154,11 +166,12 @@ public class PlayerController : MonoBehaviour
             changeScale(direction);
             moveCounter -= minusCounter;
             particle.Clear();
+            checkDeadCheckMove();
             Counter.text = moveCounter.ToString();
             particle.transform.position = this.transform.position + (Vector3)direction;
             particle.Play();
             interpolatedMovement.MoveToTarget(transform.position + (Vector3)direction);
-            checkDeadCheckMove();
+            
             playShockAnim();
             birdTilemap.SetTile(gridPosition, null);
             
@@ -174,6 +187,10 @@ public class PlayerController : MonoBehaviour
 
     private void checkDeadCheckMove()
     {
+        if(moveCounter <= 0)
+        {
+            moveCounter = 0;
+        }
         if (moveCounter <= 0 && isDead == false)
         {
             PlayDeadAnim();
@@ -264,7 +281,11 @@ public class PlayerController : MonoBehaviour
     }
     IEnumerator playPushAnim()
     {
-        spine.SetAnimation(spine.PushBoxAnim[0], false, 1f);
+        if (isPushing == false)
+        {
+            spine.SetAnimation(spine.PushBoxAnim[0], false, 1f);
+            isPushing = true;
+        }
         yield return new WaitForSeconds(0.55f);
         if (isDead == true)
         {
@@ -272,9 +293,11 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            spine.SetCharacterIdle();
             isMoving = false;
             isPushing = false;
+            spine.SetCharacterIdle();
+
+
         }
     }
     IEnumerator playWalkAnim(Vector2 direction)
