@@ -118,9 +118,14 @@ public class PlayerController : MonoBehaviour
             {
                 moveCounter--;
                 Counter.text = moveCounter.ToString();
+                
                 checkDeadCheckMove();
             }
-            interpolatedMovement.MoveToTarget(transform.position + (Vector3)direction, () => { isMoving = false; });
+            if (isPushing == false)
+            {
+                Debug.Log("IsMoving");
+                interpolatedMovement.MoveToTarget(transform.position + (Vector3)direction, () => { isMoving = false; });
+            }
 
         }
        
@@ -142,9 +147,10 @@ public class PlayerController : MonoBehaviour
                 }
                 else
                 {
+                    Debug.Log("IsPushing");
                     isMoving = true;
                     playPushAnim(direction);
-                    interpolatedMovement.MoveToTarget(transform.position + (Vector3)direction, () => { isMoving = false; });
+                   
                     if (IsOneWay == false)
                     {
                         moveCounter--;
@@ -155,6 +161,7 @@ public class PlayerController : MonoBehaviour
                     {
                         spine.SetCharacterIdle();
                     }
+                    interpolatedMovement.MoveToTarget(transform.position + (Vector3)direction, () => { isMoving = false; });
                 }
             }
 
