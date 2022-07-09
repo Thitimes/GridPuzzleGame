@@ -3961,6 +3961,11 @@ PrefabInstance:
       objectReference: {fileID: 1833453354}
     - target: {fileID: 4080499779369728718, guid: 37db2852949b983408cc58ae81e101d9,
         type: 3}
+      propertyPath: moveCounter
+      value: 82
+      objectReference: {fileID: 0}
+    - target: {fileID: 4080499779369728718, guid: 37db2852949b983408cc58ae81e101d9,
+        type: 3}
       propertyPath: groundTilemap
       value: 
       objectReference: {fileID: 244027283}
@@ -10354,8 +10359,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1595318442363234262, guid: cd62cec80f2d2874a81ec76bf563f2f5,
         type: 3}
+      propertyPath: m_TileColorArray.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1595318442363234262, guid: cd62cec80f2d2874a81ec76bf563f2f5,
+        type: 3}
+      propertyPath: m_TileMatrixArray.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1595318442363234262, guid: cd62cec80f2d2874a81ec76bf563f2f5,
+        type: 3}
       propertyPath: m_TileSpriteArray.Array.size
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1595318442363234262, guid: cd62cec80f2d2874a81ec76bf563f2f5,
         type: 3}

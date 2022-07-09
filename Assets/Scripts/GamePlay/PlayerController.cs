@@ -67,7 +67,7 @@ public class PlayerController : MonoBehaviour
         {
             if (answer.getBool() == true)
             {
-                moveCounter += 2;
+                moveCounter += 10;
             }
         }
     }
@@ -106,7 +106,7 @@ public class PlayerController : MonoBehaviour
        
         if (CanMove(direction,IsOneWay) && isMoving == false && isDead == false)
         {
-            isMoving = true;
+           
            
 
             if (isPushing == false && isShock == false && isDead == false)
@@ -124,7 +124,7 @@ public class PlayerController : MonoBehaviour
             if (isPushing == false)
             {
                 Debug.Log("IsMoving");
-                interpolatedMovement.MoveToTarget(transform.position + (Vector3)direction, () => { isMoving = false; });
+                interpolatedMovement.MoveToTarget(transform.position + (Vector3)direction, () => {  });
             }
 
         }
@@ -148,7 +148,7 @@ public class PlayerController : MonoBehaviour
                 else
                 {
                     Debug.Log("IsPushing");
-                    isMoving = true;
+                    
                     playPushAnim(direction);
                    
                     if (IsOneWay == false)
@@ -161,7 +161,7 @@ public class PlayerController : MonoBehaviour
                     {
                         spine.SetCharacterIdle();
                     }
-                    interpolatedMovement.MoveToTarget(transform.position + (Vector3)direction, () => { isMoving = false; });
+                    interpolatedMovement.MoveToTarget(transform.position + (Vector3)direction, () => {  });
                 }
             }
 
@@ -169,7 +169,7 @@ public class PlayerController : MonoBehaviour
         }
         if (birdTilemap.HasTile(gridPosition) && isMoving == false)
         {
-            isShock = true;
+            
             changeScale(direction);
             moveCounter -= minusCounter;
             particle.Clear();
@@ -271,6 +271,7 @@ public class PlayerController : MonoBehaviour
     IEnumerator ShockAnim()
     {
         isMoving = true;
+        isShock = true;
         spine.playShockAnimation();
         yield return new WaitForSeconds(0.8f);
         if (isDead == true)
@@ -280,14 +281,15 @@ public class PlayerController : MonoBehaviour
         else
         {
             spine.SetCharacterIdle();
-            isMoving = false;
+            
         }
-        
+        isMoving = false;
         isShock = false;
         
     }
     IEnumerator playPushAnim()
     {
+        isMoving = true;
         if (isPushing == false)
         {
             spine.SetAnimation(spine.PushBoxAnim[0], false, 1f);
@@ -300,15 +302,15 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            isMoving = false;
+            
             isPushing = false;
             spine.SetCharacterIdle();
-
-
         }
+        isMoving = false;
     }
     IEnumerator playWalkAnim(Vector2 direction)
     {
+        isMoving = true;
         spine.SetCharacterByDirection(direction);
         yield return new WaitForSeconds(0.3f);
         if (isDead == true)
@@ -319,5 +321,6 @@ public class PlayerController : MonoBehaviour
         {
             spine.SetCharacterIdle();
         }
+        isMoving = false;
     }
 }
