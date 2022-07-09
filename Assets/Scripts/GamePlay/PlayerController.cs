@@ -56,20 +56,20 @@ public class PlayerController : MonoBehaviour
         }
         if(correctAnswer != null && correctAnswer.getBool() == true)
         {
-            moveCounter += 2;
+            moveCounter += 10;
             Counter.text = moveCounter.ToString();
         }
         isMoving = false;
         isPushing = false;
         isDead = false;
         isShock = false;
-        if (TryGetComponent(out CorrectAnswer answer))
-        {
-            if (answer.getBool() == true)
-            {
-                moveCounter += 10;
-            }
-        }
+        //if (TryGetComponent(out CorrectAnswer answer))
+        //{
+        //    if (answer.getBool() == true)
+        //    {
+        //        moveCounter += 10;
+        //    }
+        //}
     }
 
     private void OnEnable()
