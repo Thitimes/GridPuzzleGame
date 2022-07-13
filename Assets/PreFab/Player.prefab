@@ -225,6 +225,7 @@ MonoBehaviour:
   - {r: 0.9743725, g: 1, b: 0, a: 1}
   - {r: 1, g: 0.120469436, b: 0, a: 1}
   spine: {fileID: 638023818}
+  particle: {fileID: 0}
   isMoving: 0
 --- !u!114 &4080499779369727283
 MonoBehaviour:

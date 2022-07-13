@@ -63,7 +63,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 983b9740f48ffc940a8993f346001b20, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -120,6 +120,8 @@ MonoBehaviour:
     materialsInsideMask: []
     materialsOutsideMask: []
   disableRenderingOnOverride: 1
+  updateTiming: 1
+  unscaledTime: 0
   _animationName: IDLE
   loop: 1
   timeScale: 1
@@ -141,6 +143,7 @@ MonoBehaviour:
   _runOnlyOnce: 1
   _sortingSelector: 2
   _sortingAxis: 1
+  _meshRenderer: {fileID: 0}
 --- !u!61 &1038201778735952454
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -181,3 +184,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneName: VisualNovel
   levelLoader: {fileID: 0}
+  islastLevel: 0
+  checkGame: {fileID: 0}

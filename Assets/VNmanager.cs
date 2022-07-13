@@ -73,7 +73,7 @@ public class VNmanager : MonoBehaviour
         changeScene = true;
         StartCoroutine(ChangeToNextScene(scene));
         bottomBar.PlayNextSentence();
-        NextUnityScene = currentScene.nextScene[Random.Range(0,currentScene.nextScene.Length)];
+       // NextUnityScene = currentScene.nextScene[Random.Range(0,currentScene.nextScene.Length)];
     }
     public void ChangeToBoxAnswer()
     {
