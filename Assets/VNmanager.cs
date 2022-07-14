@@ -102,6 +102,15 @@ public class VNmanager : MonoBehaviour
     {
         state = State.ANIMATE;
         currentScene = scene;
+        if (currentScene.nextScene.Length != 0)
+        {
+            NextUnityScene = currentScene.nextScene[Random.Range(0, currentScene.nextScene.Length)];
+        }
+        else
+        {
+            NextUnityScene = currentScene.nextScene[0];
+        }
+        
         choiceSelection.SetActive(false);
         boxAnswer.SetActive(false);
         bottomBar.ClearText();

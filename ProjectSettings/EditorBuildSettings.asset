@@ -5,34 +5,34 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: c05fb3f355ae0c04f9f03c55f676e996
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Comic1.unity
     guid: 4ae45afc29fb3034693467cac92f6070
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/VisualNovel.unity
     guid: 87e3331cf09446f4d98682a2c5333640
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/realgame/Stage1-1.unity
     guid: 54f406868d75e5e4a82d3bdf3084532f
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/realgame/Stage1-2.unity
     guid: e6b01db15e762ef4fad0e697bb127e44
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/VisualNovel 1.unity
     guid: 023a74cddb4f1154da6f25dc3011118f
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/realgame/stage2-1.unity
     guid: 96cb0910900c18e4996524fa6c3a9677
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/realgame/Stage2-2.unity
     guid: 69626100e8f42f84dba6fa6643f84590
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/realgame/Stage2-3.unity
     guid: 7317b0085dd5f7b4f90c7a5773d31b00
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/realgame/Stage2-4.unity
     guid: f4b4821347a6ddf409342c5c7d840a90
   - enabled: 1
@@ -41,7 +41,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/realgame/Stage3-1.unity
     guid: 64734cc9b64c670469bba1c8c5d8157e
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Comic2.unity
     guid: 188e8d965d673734f99a237e56aab4f6
   m_configObjects: {}
